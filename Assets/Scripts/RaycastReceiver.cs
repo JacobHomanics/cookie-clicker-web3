@@ -3,8 +3,6 @@ using DG.Tweening;
 
 public class RaycastReceiver : MonoBehaviour
 {
-    public float playerDamagePerClick = 1;
-
     public float maxHealth = 3;
     public float currentHealth = 3;
 
@@ -81,7 +79,7 @@ public class RaycastReceiver : MonoBehaviour
 
         if (isClicked)
         {
-            TakeDamage(playerDamagePerClick);
+            TakeDamage(FindAnyObjectByType<PlayerDamage>().damage);
         }
     }
 
@@ -93,7 +91,7 @@ public class RaycastReceiver : MonoBehaviour
         TMPro.TMP_Text textMesh = spawnedText.GetComponentInChildren<TMPro.TMP_Text>();
         if (textMesh != null)
         {
-            textMesh.text = damage.ToString();
+            textMesh.text = damage.ToString("F2");
         }
 
         if (currentHealth <= 0)

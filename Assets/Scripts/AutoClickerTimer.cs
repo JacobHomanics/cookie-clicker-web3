@@ -4,6 +4,7 @@ public class AutoClickerTimer : MonoBehaviour
 {
     public AutoClicker autoClicker;
 
+    //smart contract
     public float cooldown;
 
     public float timeLeft;
@@ -22,5 +23,10 @@ public class AutoClickerTimer : MonoBehaviour
             timeLeft = cooldown;
             FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(autoClicker.damage);
         }
+    }
+
+    public void DecreaseByCurve()
+    {
+
     }
 }

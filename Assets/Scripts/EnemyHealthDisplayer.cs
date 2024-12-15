@@ -24,7 +24,7 @@ public class EnemyHealthDisplayer : MonoBehaviour
         slider.value = rr.currentHealth;
         slider.maxValue = rr.maxHealth;
 
-        currentHealthText.text = rr.currentHealth.ToString();
-        maxHealthText.text = rr.maxHealth.ToString();
+        currentHealthText.text = rr.currentHealth.ToString("F2");
+        maxHealthText.text = rr.maxHealth.ToString("F2");
     }
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AutoClicker : MonoBehaviour
+public class PlayerDamage : MonoBehaviour
 {
     //smart contract
     public float damage;
@@ -15,14 +15,6 @@ public class AutoClicker : MonoBehaviour
 
     public void IncreaseByCurve()
     {
-        if (damage == 0)
-        {
-            damage += 1;
-        }
-        else
-        {
-            damage = damage + damage * (percentage / 100);
-
-        }
+        damage = damage + damage * (percentage / 100);
     }
 }

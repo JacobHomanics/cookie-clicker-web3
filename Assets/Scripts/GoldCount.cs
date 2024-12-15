@@ -8,7 +8,7 @@ public class GoldCount : MonoBehaviour
 
     void Update()
     {
-        text.text = amount.ToString();
+        text.text = amount.ToString("F2");
     }
 
     public void AddGold(float amount)
