@@ -2,41 +2,42 @@ using UnityEngine;
 
 public class RaycastController : MonoBehaviour
 {
-    public Outline lastActiveOutline;
+    public GameObject lastHitGameObject;
 
     void Update()
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            var hitObject = hit.collider.gameObject.GetComponent<Outline>();
+            var hitObject = hit.collider.gameObject;
+
 
             if (hitObject != null)
             {
-                if (lastActiveOutline != null)
+                if (lastHitGameObject != null)
                 {
-                    lastActiveOutline.OutlineWidth = 0;
-                    lastActiveOutline = null;
+                    lastHitGameObject.GetComponent<RaycastReceiver>().OnExit();
+                    lastHitGameObject = null;
                 }
 
-                hitObject.OutlineWidth = 2f;
-                lastActiveOutline = hitObject;
+                hitObject.GetComponent<RaycastReceiver>().OnEnter();
+                lastHitGameObject = hitObject;
             }
             else
             {
-                if (lastActiveOutline != null)
+                if (lastHitGameObject != null)
                 {
-                    lastActiveOutline.OutlineWidth = 0;
-                    lastActiveOutline = null;
+                    lastHitGameObject.GetComponent<RaycastReceiver>().OnExit();
+                    lastHitGameObject = null;
                 }
             }
         }
         else
         {
-            if (lastActiveOutline != null)
+            if (lastHitGameObject != null)
             {
-                lastActiveOutline.OutlineWidth = 0;
-                lastActiveOutline = null;
+                lastHitGameObject.GetComponent<RaycastReceiver>().OnExit();
+                lastHitGameObject = null;
             }
         }
     }
