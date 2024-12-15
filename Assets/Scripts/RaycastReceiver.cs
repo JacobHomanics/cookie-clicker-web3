@@ -15,6 +15,9 @@ public class RaycastReceiver : MonoBehaviour
 
     public void OnEnter()
     {
+        if (currentHealth <= 0)
+            return;
+
         isTargeted = true;
         outline.OutlineWidth = 2f;
     }

@@ -187,6 +187,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0cd68ec02eb8a4db6975de7f25b2d34f, type: 2}
+    - target: {fileID: 137878343086482382, guid: 908987278249b014f91c9e63dd7174e8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ea86ee9d24f5b435eb17d696c40f55e3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -502,8 +506,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDamagePerClick: 2
-  maxHealth: 3
-  currentHealth: 3
+  maxHealth: 10
+  currentHealth: 10
   animator: {fileID: 1647711691}
   outline: {fileID: 515752666}
   isTargeted: 0
