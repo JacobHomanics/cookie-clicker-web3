@@ -4,22 +4,15 @@ public class AutoClicker : MonoBehaviour
 {
 
     public float damage;
-
-    public float cooldown;
-
-    public float timeLeft;
-
-
+    public TMPro.TMP_Text text;
 
     void Update()
     {
+        text.text = damage.ToString();
+    }
 
-        timeLeft -= Time.deltaTime;
-
-        if (timeLeft <= 0)
-        {
-            timeLeft = cooldown;
-            FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(damage);
-        }
+    public void AddDamage(float amount)
+    {
+        damage += amount;
     }
 }
