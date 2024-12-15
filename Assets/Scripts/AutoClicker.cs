@@ -15,4 +15,15 @@ public class AutoClicker : MonoBehaviour
     {
         damage += amount;
     }
+
+    public float percentage;
+
+    public void IncreaseByCurve()
+    {
+        damage = damage + damage * (percentage / 100);
+    }
+
+    // public void IncreaseByCurve() {
+
+    // }
 }

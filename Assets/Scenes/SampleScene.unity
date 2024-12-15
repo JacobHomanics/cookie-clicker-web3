@@ -668,6 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   text: {fileID: 371983533}
+  percentage: 125
 --- !u!1 &371983531
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +914,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 410428258}
+        m_TargetAssemblyTypeName: PriceItem, Assembly-CSharp
+        m_MethodName: IncreaseByCurve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 189027095}
+        m_TargetAssemblyTypeName: AutoClicker, Assembly-CSharp
+        m_MethodName: IncreaseByCurve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &410428255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -980,6 +1005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   price: 5
   text: {fileID: 1206444141}
+  percentageIncreasePerUpgrade: 175
 --- !u!1 &541083716
 GameObject:
   m_ObjectHideFlags: 0
