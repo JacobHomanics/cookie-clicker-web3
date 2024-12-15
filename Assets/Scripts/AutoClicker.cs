@@ -2,8 +2,24 @@ using UnityEngine;
 
 public class AutoClicker : MonoBehaviour
 {
+    public float damage
+    {
+        get
+        {
+            return baseValue * Mathf.Pow(level, rewardExponent);
+        }
+    }
+
     //smart contract
-    public float damage;
+    public float level;
+
+    public float baseValue;
+    public float rewardExponent;
+
+    public float percentage;
+
+
+
     public TMPro.TMP_Text text;
 
     void Update()
@@ -11,18 +27,9 @@ public class AutoClicker : MonoBehaviour
         text.text = damage.ToString("F2");
     }
 
-    public float percentage;
 
     public void IncreaseByCurve()
     {
-        if (damage == 0)
-        {
-            damage += 1;
-        }
-        else
-        {
-            damage = damage + damage * (percentage / 100);
-
-        }
+        level++;
     }
 }

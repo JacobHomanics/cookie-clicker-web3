@@ -937,9 +937,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb399c727cde140c9b3d13945bd346ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
-  text: {fileID: 371983533}
+  level: 0
+  baseValue: 1
+  rewardExponent: 1.25
   percentage: 125
+  text: {fileID: 371983533}
 --- !u!1 &303948461
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,9 +1536,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d905e61e8c64a6ea3bca4c66b82928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 5
+  basePrice: 5
+  rewardExponent: 1.75
+  level: 1
   text: {fileID: 1206444141}
-  percentageIncreasePerUpgrade: 175
 --- !u!1 &496004480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,9 +1865,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d905e61e8c64a6ea3bca4c66b82928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 5
+  basePrice: 5
+  rewardExponent: 0.25
+  level: 1
   text: {fileID: 57434928}
-  percentageIncreasePerUpgrade: 25
 --- !u!114 &632789616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,6 +3240,8 @@ MonoBehaviour:
         m_CallState: 2
   percentage: 10
   goldPercentage: 3
+  baseHealth: 10
+  healthRewardExponent: 0.1
   baseReward: 1
   rewardExponent: 0.35
 --- !u!114 &1018476182
@@ -3280,9 +3286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18229759752c7434f92cf2f380b93109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
-  text: {fileID: 1790827015}
+  level: 1
+  baseValue: 2
+  rewardExponent: 0.125
   percentage: 12.5
+  text: {fileID: 1790827015}
 --- !u!1 &1021557706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,9 +3616,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d905e61e8c64a6ea3bca4c66b82928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 5
+  basePrice: 5
+  rewardExponent: 2.5
+  level: 1
   text: {fileID: 303948462}
-  percentageIncreasePerUpgrade: 250
 --- !u!114 &1040945486
 MonoBehaviour:
   m_ObjectHideFlags: 0

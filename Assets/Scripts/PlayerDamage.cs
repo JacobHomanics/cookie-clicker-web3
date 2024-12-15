@@ -2,8 +2,24 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
+    public float damage
+    {
+        get
+        {
+            return baseValue * Mathf.Pow(level, rewardExponent);
+        }
+    }
+
     //smart contract
-    public float damage;
+    public float level;
+
+    public float baseValue;
+    public float rewardExponent;
+
+    public float percentage;
+
+
+
     public TMPro.TMP_Text text;
 
     void Update()
@@ -11,10 +27,9 @@ public class PlayerDamage : MonoBehaviour
         text.text = damage.ToString("F2");
     }
 
-    public float percentage;
 
     public void IncreaseByCurve()
     {
-        damage = damage + damage * (percentage / 100);
+        level++;
     }
 }
