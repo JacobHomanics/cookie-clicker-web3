@@ -9,8 +9,13 @@ public class AutoClickerTimer : MonoBehaviour
 
     public float timeLeft;
 
+    public float percentage;
+
+    public TMPro.TMP_Text text;
+
     void Update()
     {
+        text.text = cooldown.ToString("F2");
         if (autoClicker.damage <= 0)
         {
             return;
@@ -27,6 +32,6 @@ public class AutoClickerTimer : MonoBehaviour
 
     public void DecreaseByCurve()
     {
-
+        cooldown = cooldown - cooldown * (percentage / 100);
     }
 }
