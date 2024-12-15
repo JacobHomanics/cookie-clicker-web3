@@ -2705,6 +2705,7 @@ MonoBehaviour:
   - {fileID: 2976557522616066609}
   - {fileID: 1462674793540021524}
   activeModel: {fileID: 0}
+  textPrefab: {fileID: 3723763890002416214, guid: e9494e3c366c240f7b563c238af8e460, type: 3}
 --- !u!1 &7996676941413944548
 GameObject:
   m_ObjectHideFlags: 0

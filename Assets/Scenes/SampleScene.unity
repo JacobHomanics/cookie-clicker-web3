@@ -902,8 +902,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 982399029}
-  maxHealthText: {fileID: 842552954}
-  currentHealthText: {fileID: 541083718}
+  maxHealthText: {fileID: 541083718}
+  currentHealthText: {fileID: 842552954}
   slider: {fileID: 1100072922}
 --- !u!1 &1100072920
 GameObject:

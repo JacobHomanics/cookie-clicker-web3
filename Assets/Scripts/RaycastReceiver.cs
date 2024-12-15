@@ -22,6 +22,8 @@ public class RaycastReceiver : MonoBehaviour
 
     public GameObject activeModel;
 
+    public GameObject textPrefab;
+
     public void OnEnter()
     {
         if (currentHealth <= 0)
@@ -60,7 +62,7 @@ public class RaycastReceiver : MonoBehaviour
 
         bool isClicked = false;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
         {
             isClicked = true;
         }
@@ -79,6 +81,13 @@ public class RaycastReceiver : MonoBehaviour
         if (isClicked)
         {
             currentHealth -= playerDamagePerClick;
+            GameObject spawnedText = Instantiate(textPrefab, new Vector3(transform.position.x, 1f, transform.position.z), Quaternion.identity);
+            TMPro.TMP_Text textMesh = spawnedText.GetComponentInChildren<TMPro.TMP_Text>();
+            if (textMesh != null)
+            {
+                textMesh.text = playerDamagePerClick.ToString();
+            }
+
 
             if (currentHealth <= 0)
             {
