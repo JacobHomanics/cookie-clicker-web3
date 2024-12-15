@@ -56,6 +56,7 @@ public class RaycastReceiver : MonoBehaviour
         }
     }
 
+
     void Update()
     {
         if (!isTargeted) return;
@@ -80,29 +81,36 @@ public class RaycastReceiver : MonoBehaviour
 
         if (isClicked)
         {
-            currentHealth -= playerDamagePerClick;
-            GameObject spawnedText = Instantiate(textPrefab, new Vector3(transform.position.x, 1f, transform.position.z), Quaternion.identity);
-            TMPro.TMP_Text textMesh = spawnedText.GetComponentInChildren<TMPro.TMP_Text>();
-            if (textMesh != null)
-            {
-                textMesh.text = playerDamagePerClick.ToString();
-            }
+            TakeDamage(playerDamagePerClick);
+        }
+    }
 
 
-            if (currentHealth <= 0)
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+        GameObject spawnedText = Instantiate(textPrefab, new Vector3(transform.position.x, 1f, transform.position.z), Quaternion.identity);
+        TMPro.TMP_Text textMesh = spawnedText.GetComponentInChildren<TMPro.TMP_Text>();
+        if (textMesh != null)
+        {
+            textMesh.text = damage.ToString();
+        }
+
+        if (currentHealth <= 0)
+        {
+            FindAnyObjectByType<GoldCount>().AddGold(1);
+
+            FindAnyObjectByType<EnemySpawner>().Spawn();
+            animator.Play("MeleeWarrior@Death01_A");
+            GetComponent<Collider>().enabled = false;
+            activeModel.GetComponent<Renderer>().material.DOFade(0.0f, fadeTimeOnDeath).OnComplete(() =>
             {
-                FindAnyObjectByType<EnemySpawner>().Spawn();
-                animator.Play("MeleeWarrior@Death01_A");
-                GetComponent<Collider>().enabled = false;
-                activeModel.GetComponent<Renderer>().material.DOFade(0.0f, fadeTimeOnDeath).OnComplete(() =>
-                {
-                    Destroy(this.gameObject);
-                });
-            }
-            else
-            {
-                animator.Play("1H@TakeDamage01");
-            }
+                Destroy(this.gameObject);
+            });
+        }
+        else
+        {
+            animator.Play("1H@TakeDamage01");
         }
     }
 }
