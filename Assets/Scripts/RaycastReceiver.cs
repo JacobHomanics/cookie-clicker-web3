@@ -16,6 +16,12 @@ public class RaycastReceiver : MonoBehaviour
 
     public GameObject renderObject;
 
+    public float fadeTimeOnDeath = 5f;
+
+    public GameObject[] potentialModels;
+
+    public GameObject activeModel;
+
     public void OnEnter()
     {
         if (currentHealth <= 0)
@@ -32,10 +38,21 @@ public class RaycastReceiver : MonoBehaviour
         outline.OutlineWidth = 0;
     }
 
-    public float fadeTimeOnDeath = 5f;
 
+    void Start()
+    {
+        var rn = Random.Range(0, potentialModels.Length);
+        for (var i = 0; i < potentialModels.Length; i++)
+        {
+            if (rn == i)
+            {
+                activeModel = potentialModels[rn];
+                outline = activeModel.GetComponent<Outline>();
+            }
 
-    public GameObject enemyPrefab;
+            potentialModels[i].SetActive(rn == i);
+        }
+    }
 
     void Update()
     {
@@ -65,9 +82,10 @@ public class RaycastReceiver : MonoBehaviour
 
             if (currentHealth <= 0)
             {
-                Instantiate(enemyPrefab);
+                FindAnyObjectByType<EnemySpawner>().Spawn();
                 animator.Play("MeleeWarrior@Death01_A");
-                renderObject.GetComponent<Renderer>().material.DOFade(0.0f, fadeTimeOnDeath).OnComplete(() =>
+                GetComponent<Collider>().enabled = false;
+                activeModel.GetComponent<Renderer>().material.DOFade(0.0f, fadeTimeOnDeath).OnComplete(() =>
                 {
                     Destroy(this.gameObject);
                 });
