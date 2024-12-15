@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject myPrefab;
 
+    public UnityEvent<GameObject> Spawned;
+
     public void Spawn()
     {
-        Instantiate(myPrefab);
+        var go = Instantiate(myPrefab);
+        Spawned?.Invoke(go);
     }
 }
