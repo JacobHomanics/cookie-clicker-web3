@@ -3,8 +3,18 @@ using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public GameObject myPrefab;
+
     // smart contract
     public float stageNumber;
+
+    public GameObject currentEnemy;
+
+    public UnityEvent<GameObject> Spawned;
+
+    public float percentage;
+    public float goldPercentage;
+
 
     public TMPro.TMP_Text stageNumberText;
 
@@ -15,13 +25,6 @@ public class EnemySpawner : MonoBehaviour
         Spawn();
     }
 
-    public GameObject myPrefab;
-    public GameObject currentEnemy;
-
-    public UnityEvent<GameObject> Spawned;
-
-    public float percentage;
-    public float goldPercentage;
 
     void Start()
     {
@@ -49,12 +52,6 @@ public class EnemySpawner : MonoBehaviour
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
-
-        // var newHealth = 10 + (stageNumber + stageNumber * (percentage / 100));
-        // rr.maxHealth = newHealth;
-        // rr.currentHealth = newHealth;
-
-
         var totalhealth = baseHealth * Mathf.Pow(stageNumber, healthRewardExponent);
         rr.maxHealth = totalhealth;
         rr.currentHealth = totalhealth;

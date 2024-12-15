@@ -15,10 +15,8 @@ public class PriceItem : MonoBehaviour
             return basePrice * Mathf.Pow(level, rewardExponent);
         }
     }
-    // public float price;
     public TMPro.TMP_Text text;
 
-    // public float percentageIncreasePerUpgrade;
 
     void Update()
     {
@@ -28,6 +26,5 @@ public class PriceItem : MonoBehaviour
     public void IncreaseByCurve()
     {
         level++;
-        // price = price + price * (percentageIncreasePerUpgrade / 100);
     }
 }
