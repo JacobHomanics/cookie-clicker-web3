@@ -511,6 +511,8 @@ MonoBehaviour:
   animator: {fileID: 1647711691}
   outline: {fileID: 515752666}
   isTargeted: 0
+  renderObject: {fileID: 515752664}
+  fadeTimeOnDeath: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

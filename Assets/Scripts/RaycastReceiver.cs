@@ -1,4 +1,5 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class RaycastReceiver : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class RaycastReceiver : MonoBehaviour
     public Outline outline;
 
     public bool isTargeted = false;
+
+    public GameObject renderObject;
 
     public void OnEnter()
     {
@@ -28,6 +31,11 @@ public class RaycastReceiver : MonoBehaviour
 
         outline.OutlineWidth = 0;
     }
+
+    public float fadeTimeOnDeath = 5f;
+
+
+    public GameObject enemyPrefab;
 
     void Update()
     {
@@ -57,7 +65,12 @@ public class RaycastReceiver : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                Instantiate(enemyPrefab);
                 animator.Play("MeleeWarrior@Death01_A");
+                renderObject.GetComponent<Renderer>().material.DOFade(0.0f, fadeTimeOnDeath).OnComplete(() =>
+                {
+                    Destroy(this.gameObject);
+                });
             }
             else
             {
