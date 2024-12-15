@@ -20,4 +20,9 @@ public class GoldCount : MonoBehaviour
     {
         this.amount = Mathf.Clamp(this.amount - amount, 0, Mathf.Infinity);
     }
+
+    public void RemoveGold(PriceItem priceItem)
+    {
+        RemoveGold(priceItem.price);
+    }
 }

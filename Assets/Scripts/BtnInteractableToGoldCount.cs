@@ -7,11 +7,12 @@ public class BtnInteractableToGoldCount : MonoBehaviour
 
     public Button btn;
 
-    public float price;
+
+    public PriceItem priceItem;
 
     void Update()
     {
-        btn.interactable = goldCount.amount >= price;
+        btn.interactable = goldCount.amount >= priceItem.price;
 
     }
 }
