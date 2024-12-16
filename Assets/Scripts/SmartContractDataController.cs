@@ -8,7 +8,7 @@ public class SmartContractDataController : MonoBehaviour
     {
         var contract = await ThirdwebManager.Instance.GetContract(
          address: "contract-address",
-         chainId: 8453,
+         chainId: 1,
          abi: "optional-abi"
      );
 

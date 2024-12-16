@@ -695,10 +695,6 @@ PrefabInstance:
       propertyPath: <ClientId>k__BackingField
       value: 30bdf18b082605481e87514ef992987a
       objectReference: {fileID: 0}
-    - target: {fileID: 1288923049808236541, guid: f1f7a02a8c5efe54c95062bd90592227, type: 3}
-      propertyPath: '<SupportedChains>k__BackingField.Array.data[0]'
-      value: 8453
-      objectReference: {fileID: 0}
     - target: {fileID: 2985666425045432145, guid: f1f7a02a8c5efe54c95062bd90592227, type: 3}
       propertyPath: m_Name
       value: ThirdwebManager
