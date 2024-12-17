@@ -5,6 +5,12 @@ pragma solidity >=0.8.0 <0.9.0;
 import "forge-std/console.sol";
 
 contract YourContract {
+    uint256 s_test = 50;
+
+    function getTest() external view returns (uint256) {
+        return s_test;
+    }
+
     mapping(address user => uint256) s_partyMemberStrength;
     mapping(address user => uint256) s_partyMemberSpeed;
     mapping(address user => uint256) s_playerStrength;
