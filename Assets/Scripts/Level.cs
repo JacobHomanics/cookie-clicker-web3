@@ -8,4 +8,10 @@ public class Level : MonoBehaviour
     {
         value += amount;
     }
+
+    [ContextMenu("Add 1")]
+    public void Add1()
+    {
+        value += 1;
+    }
 }
