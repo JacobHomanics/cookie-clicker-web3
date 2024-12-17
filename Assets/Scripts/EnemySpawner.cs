@@ -48,14 +48,54 @@ public class EnemySpawner : MonoBehaviour
     public float baseReward = 1f;
     public float rewardExponent = 1.1f;
 
+    [ContextMenu("Predict")]
+    public void Predict()
+    {
+        // int exponent = 100;
+
+        // for (int i = 0; i < exponent; i++)
+        // {
+        //     Debug.Log(totalExp);
+
+        //     // var result = Mathf.Pow(i, healthRewardExponent);
+        //     // Debug.Log("For stage number: " + i + ", increase by " + result);
+        // }
+    }
+
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
 
-        var totalhealth = baseHealth * Mathf.Pow(stageNumber, healthRewardExponent);
-        rr.maxHealth = totalhealth;
-        rr.currentHealth = totalhealth;
+        // var totalGoldToAdd = 0f;
+        // var totalHealthToAdd = 0f;
 
-        var totalReward = baseReward * Mathf.Pow(stageNumber, rewardExponent);
-        rr.goldAmount = totalReward;
+        // for (int i = 0; i < stageNumber; i++)
+        // {
+        //     totalHealthToAdd += Mathf.Pow(stageNumber, healthRewardExponent);
+        //     totalGoldToAdd += Mathf.Pow(stageNumber, rewardExponent);
+
+
+        //     // var totalhealth = baseHealth * Mathf.Pow(stageNumber, healthRewardExponent);
+        //     // rr.maxHealth = totalhealth;
+        //     // rr.currentHealth = totalhealth;
+
+        //     // var totalReward = baseReward * Mathf.Pow(stageNumber, rewardExponent);
+        //     // rr.goldAmount = totalReward;
+        // }
+
+        var totalHealth = baseHealth * Mathf.Pow(healthRewardExponent, stageNumber - 1);
+
+        rr.maxHealth = totalHealth;
+        rr.currentHealth = totalHealth;
+
+        var totalGold = baseReward * Mathf.Pow(rewardExponent, stageNumber - 1);
+        rr.goldAmount = totalGold;
+
+        // rr.currentHealth = totalhealth;
+
+        // var totalReward = baseReward * Mathf.Pow(stageNumber, rewardExponent);
+        // rr.goldAmount = totalReward;
+
+
+
     }
 }
