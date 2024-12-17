@@ -7,10 +7,10 @@ import { useUnityContext } from "react-unity-webgl";
 
 const Home: NextPage = () => {
   const { unityProvider } = useUnityContext({
-    loaderUrl: "unityBuild/test.loader.js",
-    dataUrl: "unityBuild/test.data",
-    frameworkUrl: "unityBuild/test.framework.js",
-    codeUrl: "unityBuild/test.wasm",
+    loaderUrl: "Build/test.loader.js",
+    dataUrl: "Build/test.data",
+    frameworkUrl: "Build/test.framework.js",
+    codeUrl: "Build/test.wasm",
   });
 
   return (
