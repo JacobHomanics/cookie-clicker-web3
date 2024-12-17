@@ -849,7 +849,7 @@ MonoBehaviour:
   initialTimeLeft: 2.5
   growthRate: 0.95
   text: {fileID: 2010276624}
-  monoBehaviour: {fileID: 560024395}
+  timer: {fileID: 560024395}
 --- !u!114 &189027095
 MonoBehaviour:
   m_ObjectHideFlags: 0

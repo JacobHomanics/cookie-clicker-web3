@@ -22,42 +22,21 @@ public class AutoClickerTimer : MonoBehaviour
 
     public float initialTimeLeft = 2.5f;
 
-    // public float elapsedTime;
-
     public float growthRate;
-    // public float level;
 
     public TMPro.TMP_Text text;
 
-    public MonoBehaviour monoBehaviour;
+    public Timer timer;
 
     void Update()
     {
         text.text = Duration.ToString("F2");
-        // if (autoClicker.level.value <= 0)
-        // {
-        //     return;
-        // }
-
-        monoBehaviour.enabled = autoClicker.level.value > 0;
-
-        // elapsedTime += Time.deltaTime;
-
-        // if (elapsedTime >= Duration)
-        // {
-        //     elapsedTime = 0;
-        //     
-
-        // }
+        timer.enabled = autoClicker.level.value > 0;
+        timer.duration = Duration;
     }
 
     public void HitEnemy()
     {
         FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(autoClicker.damage);
     }
-
-    // public void DecreaseByCurve()
-    // {
-    //     level++;
-    // }
 }
