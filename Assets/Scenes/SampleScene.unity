@@ -842,9 +842,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoClicker: {fileID: 189027095}
-  cooldown: 4
-  timeLeft: 4
-  percentage: 0
+  cooldown: 2.5
+  timeLeft: 2.5
+  percentage: 2.5
   text: {fileID: 2010276624}
 --- !u!114 &189027095
 MonoBehaviour:
@@ -859,7 +859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  baseValue: 0
+  baseValue: 1
   rewardExponent: 1.1
   text: {fileID: 371983533}
 --- !u!1 &303948461
@@ -3229,7 +3229,7 @@ MonoBehaviour:
   baseHealth: 10
   healthRewardExponent: 0.1
   baseReward: 1
-  rewardExponent: 1.1
+  rewardExponent: 0.15
 --- !u!114 &1018476182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3258,7 +3258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 1
   baseValue: 2
-  rewardExponent: 1.1
+  rewardExponent: 0.2
   text: {fileID: 1790827015}
 --- !u!114 &1018476184
 MonoBehaviour:
@@ -3669,7 +3669,7 @@ MonoBehaviour:
         m_MethodName: RemoveGold
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 1040945485}
           m_ObjectArgumentAssemblyTypeName: PriceItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 5
