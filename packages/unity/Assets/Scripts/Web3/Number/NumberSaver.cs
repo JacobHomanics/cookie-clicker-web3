@@ -27,6 +27,9 @@ public class NumberSaver : MonoBehaviour
 #if UNITY_EDITOR
 
 #elif UNITY_WEBGL
+
+Debug.Log(cww3.address.Length);
+Debug.Log(cww3.address);
 if (cww3.address.Length > 0) {
     var contract = await ThirdwebManager.Instance.GetContract(
                  address: cww3.contractAddress,
