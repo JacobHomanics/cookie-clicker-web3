@@ -56,16 +56,16 @@ public class EnemySpawner : MonoBehaviour
     {
         int modifierLength = 100;
 
-        for (int i = 1; i < modifierLength; i++)
+        for (int i = 0; i < modifierLength; i++)
         {
             var result = Calculate(baseHealth, healthRewardExponent, i);
             Debug.Log(i + ": " + result);
         }
     }
 
-    public float Calculate(float baseValue, float exponent, float modifier)
+    public float Calculate(float initialValue, float growthRate, float iterations)
     {
-        return baseValue * Mathf.Pow(exponent, modifier - 1);
+        return initialValue * Mathf.Pow(growthRate, iterations);
     }
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)

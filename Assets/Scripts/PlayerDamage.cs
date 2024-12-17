@@ -6,9 +6,15 @@ public class PlayerDamage : MonoBehaviour
     {
         get
         {
-            return baseValue * Mathf.Pow(level, rewardExponent);
+            return Calculate(baseValue, rewardExponent, level);
         }
     }
+
+    public float Calculate(float baseValue, float exponent, float modifier)
+    {
+        return baseValue * Mathf.Pow(exponent, modifier - 1);
+    }
+
 
     //smart contract
     public float level;

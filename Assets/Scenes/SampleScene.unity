@@ -2143,7 +2143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   basePrice: 5
-  rewardExponent: 1.1
+  rewardExponent: 1.75
   level: 1
   text: {fileID: 57434928}
 --- !u!114 &632789616
@@ -3497,7 +3497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 5843082062569340566, guid: 793000457191b4a5e8a931e40429a3c8, type: 3}
-  stageNumber: 1
+  stageNumber: 0
   currentEnemy: {fileID: 0}
   Spawned:
     m_PersistentCalls:

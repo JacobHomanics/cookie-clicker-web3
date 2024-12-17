@@ -12,9 +12,16 @@ public class PriceItem : MonoBehaviour
     {
         get
         {
-            return basePrice * Mathf.Pow(level, rewardExponent);
+            return Calculate(basePrice, rewardExponent, level);
         }
     }
+
+    public float Calculate(float baseValue, float exponent, float modifier)
+    {
+        return baseValue * Mathf.Pow(exponent, modifier - 1);
+    }
+
+
     public TMPro.TMP_Text text;
 
 
