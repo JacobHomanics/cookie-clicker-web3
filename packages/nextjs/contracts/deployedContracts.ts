@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   8453: {
     PlayerData: {
-      address: "0x67699539dd86d946a2f497d3b137f7ad5b23fed8",
+      address: "0xce328f8fe100371336ff6c02dc46e682e7e01616",
       abi: [
         {
           type: "function",
@@ -125,24 +125,6 @@ const deployedContracts = {
         {
           type: "function",
           name: "setPartyMemberStrength",
-          inputs: [
-            {
-              name: "goldAmount",
-              type: "uint256",
-              internalType: "uint256",
-            },
-            {
-              name: "number",
-              type: "uint256",
-              internalType: "uint256",
-            },
-          ],
-          outputs: [],
-          stateMutability: "nonpayable",
-        },
-        {
-          type: "function",
-          name: "setPlayerGold",
           inputs: [
             {
               name: "goldAmount",

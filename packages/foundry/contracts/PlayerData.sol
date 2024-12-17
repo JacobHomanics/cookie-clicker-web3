@@ -50,9 +50,8 @@ contract PlayerData {
         s_playerStage[msg.sender] = number;
     }
 
-    function setPlayerGold(uint256 goldAmount, uint256 number) external {
+    function setPlayerGold(uint256 goldAmount) external {
         s_playerGold[msg.sender] = goldAmount;
-        s_playerGold[msg.sender] = number;
     }
 
     function getPartyMemberStrength(
@@ -74,6 +73,6 @@ contract PlayerData {
     }
 
     function getPlayerGold(address user) external view returns (uint256) {
-        return s_playerStage[user];
+        return s_playerGold[user];
     }
 }

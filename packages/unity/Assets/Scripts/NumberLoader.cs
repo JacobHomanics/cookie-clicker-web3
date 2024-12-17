@@ -5,6 +5,10 @@ using UnityEngine.Events;
 
 public class NumberLoader : MonoBehaviour
 {
+
+    public bool isStoredOnchainAsFloat;
+
+
     public ConnectWalletWeb3 cww3;
     public string functionName;
 
@@ -23,7 +27,15 @@ public class NumberLoader : MonoBehaviour
              );
 
         var result = await contract.Read<int>(functionName, cww3.address);
-        OnLoad?.Invoke(result);
+
+
+        float value = result;
+
+        if (isStoredOnchainAsFloat) {
+            value = result / 100f;
+        }
+
+        OnLoad?.Invoke(value);
 #endif
     }
 #pragma warning restore CS1998
