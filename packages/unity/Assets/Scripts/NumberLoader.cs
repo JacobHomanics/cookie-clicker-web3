@@ -20,6 +20,8 @@ public class NumberLoader : MonoBehaviour
 #if UNITY_EDITOR
 
 #elif UNITY_WEBGL
+if (cww3.address.Length > 0) {
+
         var contract = await ThirdwebManager.Instance.GetContract(
                  address: cww3.contractAddress,
                  chainId: cww3.chainId,
@@ -35,8 +37,8 @@ public class NumberLoader : MonoBehaviour
         if (isStoredOnchainAsFloat) {
             value = result / 100f;
         }
-
         OnLoad?.Invoke(value);
+}
 #endif
     }
 #pragma warning restore CS1998
