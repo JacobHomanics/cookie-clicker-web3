@@ -2246,18 +2246,6 @@ MonoBehaviour:
   OnSave:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1873235053}
-        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
-        m_MethodName: AdvanceStage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 387652464}
         m_TargetAssemblyTypeName: Number, Assembly-CSharp
         m_MethodName: AddOrSubtract
@@ -2267,6 +2255,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873235053}
+        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
+        m_MethodName: AdvanceStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3508,7 +3508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chainId: 8453
-  contractAddress: 0xce328f8fe100371336ff6c02dC46E682e7E01616
+  contractAddress: 0x1a107E91587deAD66C8B9ADe7D6ACb83e287440d
+  abi: '[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getPartyMemberSpeed\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getPartyMemberStrength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getPlayerGold\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getPlayerStage\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getPlayerStrength\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goldAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"number\",\"type\":\"uint256\"}],\"name\":\"setPartyMemberSpeed\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goldAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"number\",\"type\":\"uint256\"}],\"name\":\"setPartyMemberStrength\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goldAmount\",\"type\":\"uint256\"}],\"name\":\"setPlayerGold\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goldAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"number\",\"type\":\"uint256\"}],\"name\":\"setPlayerStage\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"goldAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"number\",\"type\":\"uint256\"}],\"name\":\"setPlayerStrength\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]'
   loginButton: {fileID: 161206759}
   addressTextGo: {fileID: 650500564}
   addressText: {fileID: 650500566}
@@ -3589,11 +3590,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1655716223}
+  - {fileID: 852688985}
   - {fileID: 1568022223}
+  - {fileID: 1655716223}
   - {fileID: 1173200220}
   - {fileID: 1481954461}
-  - {fileID: 852688985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &736717105
@@ -4259,6 +4260,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 939757469}
   - {fileID: 1481490382}
   m_Father: {fileID: 723427969}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4562,7 +4564,6 @@ GameObject:
   - component: {fileID: 884862094}
   - component: {fileID: 884862093}
   - component: {fileID: 884862092}
-  - component: {fileID: 884862091}
   m_Layer: 5
   m_Name: Save Gold Button
   m_TagString: Untagged
@@ -4590,21 +4591,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: 2, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &884862091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884862089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 150a9d43d179a4df28948b25f864236c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  btn: {fileID: 884862092}
-  gold: {fileID: 527633829}
-  price: {fileID: 388402171}
 --- !u!114 &884862092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4649,8 +4635,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1697636181}
-        m_TargetAssemblyTypeName: NumberSaver, Assembly-CSharp
+      - m_Target: {fileID: 939757470}
+        m_TargetAssemblyTypeName: NumberSaverWithOneParameter, Assembly-CSharp
         m_MethodName: Connect
         m_Mode: 1
         m_Arguments:
@@ -4835,6 +4821,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938839153}
   m_CullTransparentMesh: 1
+--- !u!1 &939757468
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939757469}
+  - component: {fileID: 939757470}
+  m_Layer: 0
+  m_Name: Saver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &939757469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939757468}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 852688985}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &939757470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939757468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3695c5c3472874707abf03576ee6e60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cww3: {fileID: 723427968}
+  functionName: setPlayerGold
+  number: {fileID: 527633829}
+  OnSave:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &942216925
 GameObject:
   m_ObjectHideFlags: 0

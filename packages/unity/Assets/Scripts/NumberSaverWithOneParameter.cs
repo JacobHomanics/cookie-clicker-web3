@@ -3,20 +3,20 @@ using Thirdweb.Unity;
 using Thirdweb;
 using UnityEngine.Events;
 
-public class NumberLoader : MonoBehaviour
+public class NumberSaverWithOneParameter : MonoBehaviour
 {
-
-    public bool isStoredOnchainAsFloat;
-
-
     public ConnectWalletWeb3 cww3;
     public string functionName;
+    public Number number;
 
-    public UnityEvent<float> OnLoad;
+    public UnityEvent OnSave;
+
 
 #pragma warning disable CS1998
     public async void Connect()
     {
+
+
 #if UNITY_EDITOR
 
 #elif UNITY_WEBGL
@@ -27,17 +27,13 @@ public class NumberLoader : MonoBehaviour
 
              );
 
-        var result = await contract.Read<int>(functionName, cww3.address);
 
-
-        float value = result;
-
-        if (isStoredOnchainAsFloat) {
-            value = result / 100f;
-        }
-
-        OnLoad?.Invoke(value);
+        await contract.Write(ThirdwebManager.Instance.GetActiveWallet(), functionName, 0, Mathf.RoundToInt(number.Value * 100));
+        
 #endif
+
+        OnSave?.Invoke();
+
     }
 #pragma warning restore CS1998
 

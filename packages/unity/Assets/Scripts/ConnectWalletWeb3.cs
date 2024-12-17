@@ -9,6 +9,8 @@ public class ConnectWalletWeb3 : MonoBehaviour
     public int chainId;
     public string contractAddress;
 
+    public string abi;
+
     public GameObject loginButton;
     public GameObject addressTextGo;
     public TMP_Text addressText;
