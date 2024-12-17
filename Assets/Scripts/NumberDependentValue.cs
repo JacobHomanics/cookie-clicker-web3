@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LevelDependentValue : MonoBehaviour
+public class NumberDependentValue : MonoBehaviour
 {
     [Header("Properties")]
     public float initialValue = 1f;

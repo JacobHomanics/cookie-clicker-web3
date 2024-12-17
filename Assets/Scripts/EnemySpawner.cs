@@ -71,8 +71,8 @@ public class EnemySpawner : MonoBehaviour
     //     return initialValue * Mathf.Pow(growthRate, iterations);
     // }
 
-    public LevelDependentValue health;
-    public LevelDependentValue gold;
+    public NumberDependentValue health;
+    public NumberDependentValue gold;
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {

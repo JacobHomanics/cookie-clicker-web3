@@ -5,8 +5,8 @@ public class AutoClicker : MonoBehaviour
     [Header("Core")]
     public Number strengthLevel;
 
-    public LevelDependentValue duration;
-    public LevelDependentValue damage;
+    public NumberDependentValue duration;
+    public NumberDependentValue damage;
 
     public Timer timer;
 
