@@ -13,11 +13,20 @@ public class Number : MonoBehaviour
         set
         {
             _value = value;
+
+            for (int i = 0; i < components.Length; i++)
+            {
+                _value = components[i].Calculate(_value);
+            }
+
+
             OnChange?.Invoke(_value);
         }
     }
 
     public UnityEvent<float> OnChange;
+
+    public NumberComponent[] components;
 
     public void AddOrSubtract(float newValue)
     {
@@ -28,5 +37,15 @@ public class Number : MonoBehaviour
     public void Add1()
     {
         Value += 1;
+    }
+
+    public void Add(Number number)
+    {
+        Value += number.Value;
+    }
+
+    public void Subtract(Number number)
+    {
+        Value -= number.Value;
     }
 }

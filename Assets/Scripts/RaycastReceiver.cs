@@ -95,7 +95,7 @@ public class RaycastReceiver : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            FindAnyObjectByType<GoldCount>().AddGold(goldAmount);
+            FindAnyObjectByType<GoldCount>().gold.Value += goldAmount;
 
             FindAnyObjectByType<EnemySpawner>().Spawn();
             animator.Play("MeleeWarrior@Death01_A");

@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 40509596}
   - component: {fileID: 40509598}
   - component: {fileID: 40509597}
+  - component: {fileID: 40509599}
   m_Layer: 5
   m_Name: Gold Text
   m_TagString: Untagged
@@ -391,6 +392,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40509595}
   m_CullTransparentMesh: 1
+--- !u!114 &40509599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40509595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 531150b6bb9d74d70a8cdd6230fef056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reference: {fileID: 527633829}
+  text: {fileID: 40509597}
+  format: F2
 --- !u!1 &57434927
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,8 +922,6 @@ MonoBehaviour:
   duration: {fileID: 1089784910}
   damage: {fileID: 1364519680}
   timer: {fileID: 560024395}
-  durationText: {fileID: 2010276624}
-  damageText: {fileID: 371983533}
 --- !u!1001 &262582147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1671,6 +1685,72 @@ MonoBehaviour:
   OnChange:
     m_PersistentCalls:
       m_Calls: []
+  components: []
+--- !u!1 &388402168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 388402169}
+  - component: {fileID: 388402170}
+  - component: {fileID: 388402171}
+  m_Layer: 0
+  m_Name: Speed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &388402169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388402168}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1216187827}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &388402170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388402168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
+  components: []
+--- !u!114 &388402171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388402168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5814f0fe1be4539a678f9b85ee786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialValue: 5
+  percentageChange: 10
+  level: {fileID: 388402170}
 --- !u!1 &410428252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,18 +1836,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476182}
-        m_TargetAssemblyTypeName: GoldCount, Assembly-CSharp
-        m_MethodName: RemoveGold
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 410428258}
-          m_ObjectArgumentAssemblyTypeName: PriceItem, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 410428258}
         m_TargetAssemblyTypeName: PriceItem, Assembly-CSharp
         m_MethodName: IncreaseByCurve
@@ -1789,6 +1857,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 527633831}
+        m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
+        m_MethodName: Subtract
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1977296557}
+          m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -2112,6 +2192,85 @@ MonoBehaviour:
   initialValue: 10
   percentageChange: 25
   level: {fileID: 387652464}
+--- !u!1 &527633827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 527633828}
+  - component: {fileID: 527633829}
+  - component: {fileID: 527633830}
+  - component: {fileID: 527633831}
+  m_Layer: 0
+  m_Name: Gold
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &527633828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527633827}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1018476180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &527633829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527633827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
+  components:
+  - {fileID: 527633830}
+--- !u!114 &527633830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527633827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a57a4fc7b464b3c989ed371f6c245d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  min: 0
+  max: Infinity
+--- !u!114 &527633831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 527633827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cd412b89f76e48d38c9f6ec085ad5c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: {fileID: 527633829}
 --- !u!1 &541083716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,18 +2587,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476182}
-        m_TargetAssemblyTypeName: GoldCount, Assembly-CSharp
-        m_MethodName: RemoveGold
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 632789615}
-          m_ObjectArgumentAssemblyTypeName: PriceItem, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 632789615}
         m_TargetAssemblyTypeName: PriceItem, Assembly-CSharp
         m_MethodName: IncreaseByCurve
@@ -2461,6 +2608,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 527633831}
+        m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
+        m_MethodName: Subtract
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1739281952}
+          m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3673,6 +3832,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &983236742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983236743}
+  m_Layer: 0
+  m_Name: Shop Prices
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &983236743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983236742}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 240, y: 1074, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1216187827}
+  - {fileID: 1067789741}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1018476178
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,6 +3915,7 @@ Transform:
   - {fileID: 387652463}
   - {fileID: 1873235052}
   - {fileID: 1747308730}
+  - {fileID: 527633828}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1018476182
@@ -3737,8 +3930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e86dd0393e24ae78d2d8f312595b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 40509597}
-  amount: 0
+  gold: {fileID: 527633829}
 --- !u!114 &1018476183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4156,18 +4348,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476182}
-        m_TargetAssemblyTypeName: GoldCount, Assembly-CSharp
-        m_MethodName: RemoveGold
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 1040945485}
-          m_ObjectArgumentAssemblyTypeName: PriceItem, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 5
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1040945485}
         m_TargetAssemblyTypeName: PriceItem, Assembly-CSharp
         m_MethodName: IncreaseByCurve
@@ -4189,6 +4369,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 527633831}
+        m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
+        m_MethodName: Subtract
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 388402171}
+          m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -4366,6 +4558,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1041143169}
   m_CullTransparentMesh: 1
+--- !u!1 &1067789740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1067789741}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1067789741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067789740}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1739281950}
+  m_Father: {fileID: 983236743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1089784907
 GameObject:
   m_ObjectHideFlags: 0
@@ -4415,6 +4639,7 @@ MonoBehaviour:
   OnChange:
     m_PersistentCalls:
       m_Calls: []
+  components: []
 --- !u!114 &1089784910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4917,6 +5142,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206444139}
   m_CullTransparentMesh: 1
+--- !u!1 &1216187826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216187827}
+  m_Layer: 0
+  m_Name: Teammate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1216187827
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216187826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1977296555}
+  - {fileID: 388402169}
+  m_Father: {fileID: 983236743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1344203136
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,6 +5299,7 @@ MonoBehaviour:
   OnChange:
     m_PersistentCalls:
       m_Calls: []
+  components: []
 --- !u!114 &1364519680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5128,6 +5387,71 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1739281949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739281950}
+  - component: {fileID: 1739281951}
+  - component: {fileID: 1739281952}
+  m_Layer: 0
+  m_Name: Strength
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739281950
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739281949}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1067789741}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739281951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739281949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
+  components: []
+--- !u!114 &1739281952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739281949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5814f0fe1be4539a678f9b85ee786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialValue: 5
+  percentageChange: 75
+  level: {fileID: 1739281951}
 --- !u!1 &1747308729
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,6 +5516,7 @@ MonoBehaviour:
   OnChange:
     m_PersistentCalls:
       m_Calls: []
+  components: []
 --- !u!1 &1790827013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5545,6 +5870,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875907170}
   m_CullTransparentMesh: 1
+--- !u!1 &1977296554
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1977296555}
+  - component: {fileID: 1977296556}
+  - component: {fileID: 1977296557}
+  m_Layer: 0
+  m_Name: Strength
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1977296555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977296554}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1216187827}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977296556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977296554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
+  components: []
+--- !u!114 &1977296557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977296554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5814f0fe1be4539a678f9b85ee786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialValue: 5
+  percentageChange: 10
+  level: {fileID: 1977296556}
 --- !u!1 &2010276622
 GameObject:
   m_ObjectHideFlags: 0
@@ -5707,3 +6097,4 @@ SceneRoots:
   - {fileID: 1116616606}
   - {fileID: 438046347}
   - {fileID: 262582147}
+  - {fileID: 983236743}

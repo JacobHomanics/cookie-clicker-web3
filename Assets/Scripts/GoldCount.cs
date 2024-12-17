@@ -2,27 +2,29 @@ using UnityEngine;
 
 public class GoldCount : MonoBehaviour
 {
-    public TMPro.TMP_Text text;
+    public Number gold;
 
-    public float amount;
+    // public TMPro.TMP_Text text;
 
-    void Update()
-    {
-        text.text = amount.ToString("F2");
-    }
+    // public float amount;
 
-    public void AddGold(float amount)
-    {
-        this.amount += amount;
-    }
+    // void Update()
+    // {
+    //     text.text = amount.ToString("F2");
+    // }
 
-    public void RemoveGold(float amount)
-    {
-        this.amount = Mathf.Clamp(this.amount - amount, 0, Mathf.Infinity);
-    }
+    // public void AddGold(float amount)
+    // {
+    //     this.amount += amount;
+    // }
 
-    public void RemoveGold(PriceItem priceItem)
-    {
-        RemoveGold(priceItem.price);
-    }
+    // public void RemoveGold(float amount)
+    // {
+    //     this.amount = Mathf.Clamp(this.amount - amount, 0, Mathf.Infinity);
+    // }
+
+    // public void RemoveGold(PriceItem priceItem)
+    // {
+    //     RemoveGold(priceItem.price);
+    // }
 }

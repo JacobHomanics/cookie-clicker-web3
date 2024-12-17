@@ -12,7 +12,6 @@ public class BtnInteractableToGoldCount : MonoBehaviour
 
     void Update()
     {
-        btn.interactable = goldCount.amount >= priceItem.price;
-
+        btn.interactable = goldCount.gold.Value >= priceItem.price;
     }
 }
