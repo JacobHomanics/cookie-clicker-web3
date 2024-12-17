@@ -25,6 +25,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Hello");
         Spawn();
     }
 
