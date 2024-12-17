@@ -315,7 +315,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -796,85 +796,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88289675}
   m_CullTransparentMesh: 1
---- !u!1 &144155062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 144155065}
-  - component: {fileID: 144155064}
-  - component: {fileID: 144155063}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &144155063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144155062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
-  m_CursorLockBehavior: 0
-  m_ScrollDeltaPerTick: 6
---- !u!114 &144155064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144155062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &144155065
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144155062}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &189027092
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,13 +838,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 189027092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5acdf0c3053dc4167a8ec4bc5c3e4025, type: 3}
+  m_Script: {fileID: 11500000, guid: 7999809e855ec429f998976f55d0f26b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   autoClicker: {fileID: 189027095}
   cooldown: 4
-  timeLeft: 0
-  percentage: 3
+  timeLeft: 4
+  percentage: 0
   text: {fileID: 2010276624}
 --- !u!114 &189027095
 MonoBehaviour:
@@ -934,13 +855,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 189027092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb399c727cde140c9b3d13945bd346ce, type: 3}
+  m_Script: {fileID: 11500000, guid: c76a263c4263447b1bacb86dc5c5e318, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  baseValue: 1
-  rewardExponent: 1.25
-  percentage: 125
+  baseValue: 0
+  rewardExponent: 1.1
   text: {fileID: 371983533}
 --- !u!1 &303948461
 GameObject:
@@ -1435,7 +1355,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476183}
+      - m_Target: {fileID: 1018476182}
         m_TargetAssemblyTypeName: GoldCount, Assembly-CSharp
         m_MethodName: RemoveGold
         m_Mode: 2
@@ -1518,10 +1438,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 410428252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff9db8dc0e664adb8d5eeaac085a573, type: 3}
+  m_Script: {fileID: 11500000, guid: 150a9d43d179a4df28948b25f864236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCount: {fileID: 1018476183}
+  goldCount: {fileID: 1018476182}
   btn: {fileID: 410428254}
   priceItem: {fileID: 410428258}
 --- !u!114 &410428258
@@ -1533,13 +1453,81 @@ MonoBehaviour:
   m_GameObject: {fileID: 410428252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d905e61e8c64a6ea3bca4c66b82928, type: 3}
+  m_Script: {fileID: 11500000, guid: b42e8739774fc4801a320adfba67e416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   basePrice: 5
-  rewardExponent: 1.75
+  rewardExponent: 1.1
   level: 1
   text: {fileID: 1206444141}
+--- !u!1 &438046344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 438046347}
+  - component: {fileID: 438046346}
+  - component: {fileID: 438046345}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &438046345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438046344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &438046346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438046344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &438046347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438046344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496004480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,7 +1724,7 @@ MonoBehaviour:
   m_text: 300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1862,11 +1850,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 632789613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d905e61e8c64a6ea3bca4c66b82928, type: 3}
+  m_Script: {fileID: 11500000, guid: b42e8739774fc4801a320adfba67e416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   basePrice: 5
-  rewardExponent: 0.25
+  rewardExponent: 1.1
   level: 1
   text: {fileID: 57434928}
 --- !u!114 &632789616
@@ -1878,10 +1866,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 632789613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff9db8dc0e664adb8d5eeaac085a573, type: 3}
+  m_Script: {fileID: 11500000, guid: 150a9d43d179a4df28948b25f864236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCount: {fileID: 1018476183}
+  goldCount: {fileID: 1018476182}
   btn: {fileID: 632789617}
   priceItem: {fileID: 632789615}
 --- !u!114 &632789617
@@ -1928,7 +1916,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476183}
+      - m_Target: {fileID: 1018476182}
         m_TargetAssemblyTypeName: GoldCount, Assembly-CSharp
         m_MethodName: RemoveGold
         m_Mode: 2
@@ -1952,7 +1940,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1018476184}
+      - m_Target: {fileID: 1018476183}
         m_TargetAssemblyTypeName: PlayerDamage, Assembly-CSharp
         m_MethodName: IncreaseByCurve
         m_Mode: 1
@@ -2506,7 +2494,7 @@ MonoBehaviour:
   m_text: 300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3124,7 +3112,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 40
+  field of view: 36.9
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3151,7 +3139,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 3.48, z: 10}
+  m_LocalPosition: {x: 0, y: 3.2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3187,7 +3175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018476178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b46a3d0f75344d983d4132adc522e1, type: 3}
+  m_Script: {fileID: 11500000, guid: e27c017f64b8045fd9da71456c0a9316, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lastHitGameObject: {fileID: 0}
@@ -3216,17 +3204,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018476178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e3c19e9aa0f346b790f14afd2abe054, type: 3}
+  m_Script: {fileID: 11500000, guid: 0068d26633b4745e3adfd5b8cb26d3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myPrefab: {fileID: 5843082062569340566, guid: 793000457191b4a5e8a931e40429a3c8, type: 3}
   stageNumber: 1
-  stageNumberText: {fileID: 736717107}
-  myPrefab: {fileID: 7910398192874247365, guid: fa6fffd167a7047e397bc31973b9d0fa, type: 3}
   currentEnemy: {fileID: 0}
   Spawned:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476182}
+      - m_Target: {fileID: 1018476184}
         m_TargetAssemblyTypeName: EnemyHealthDisplayer, Assembly-CSharp
         m_MethodName: SetGameObject
         m_Mode: 0
@@ -3238,12 +3225,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  percentage: 10
-  goldPercentage: 3
+  stageNumberText: {fileID: 736717107}
   baseHealth: 10
   healthRewardExponent: 0.1
   baseReward: 1
-  rewardExponent: 0.35
+  rewardExponent: 1.1
 --- !u!114 &1018476182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3253,13 +3239,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018476178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 377d4eaf27998497f8b88f29e7cfdae5, type: 3}
+  m_Script: {fileID: 11500000, guid: 79e86dd0393e24ae78d2d8f312595b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
-  maxHealthText: {fileID: 541083718}
-  currentHealthText: {fileID: 842552954}
-  slider: {fileID: 1100072922}
+  text: {fileID: 40509597}
+  amount: 0
 --- !u!114 &1018476183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3269,11 +3253,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018476178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f3453a40175845718abf6c5774df65b, type: 3}
+  m_Script: {fileID: 11500000, guid: f3270187fa7644597a714550086f1801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 40509597}
-  amount: 0
+  level: 1
+  baseValue: 2
+  rewardExponent: 1.1
+  text: {fileID: 1790827015}
 --- !u!114 &1018476184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3283,14 +3269,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018476178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18229759752c7434f92cf2f380b93109, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a4f492c077c146aab405ceb8ecbf1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  baseValue: 2
-  rewardExponent: 0.125
-  percentage: 12.5
-  text: {fileID: 1790827015}
+  enemy: {fileID: 0}
+  maxHealthText: {fileID: 541083718}
+  currentHealthText: {fileID: 842552954}
+  slider: {fileID: 1100072922}
 --- !u!1 &1021557706
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,11 +3598,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1040945483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50d905e61e8c64a6ea3bca4c66b82928, type: 3}
+  m_Script: {fileID: 11500000, guid: b42e8739774fc4801a320adfba67e416, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   basePrice: 5
-  rewardExponent: 2.5
+  rewardExponent: 1.1
   level: 1
   text: {fileID: 303948462}
 --- !u!114 &1040945486
@@ -3629,10 +3614,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1040945483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff9db8dc0e664adb8d5eeaac085a573, type: 3}
+  m_Script: {fileID: 11500000, guid: 150a9d43d179a4df28948b25f864236c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldCount: {fileID: 1018476183}
+  goldCount: {fileID: 1018476182}
   btn: {fileID: 1040945487}
   priceItem: {fileID: 1040945485}
 --- !u!114 &1040945487
@@ -3679,12 +3664,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476183}
+      - m_Target: {fileID: 1018476182}
         m_TargetAssemblyTypeName: GoldCount, Assembly-CSharp
         m_MethodName: RemoveGold
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1040945485}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: PriceItem, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 5
@@ -4939,4 +4924,4 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1018476180}
   - {fileID: 1116616606}
-  - {fileID: 144155065}
+  - {fileID: 438046347}

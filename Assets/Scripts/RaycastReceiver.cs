@@ -13,8 +13,6 @@ public class RaycastReceiver : MonoBehaviour
 
     public bool isTargeted = false;
 
-    public GameObject renderObject;
-
     public float fadeTimeOnDeath = 5f;
 
     public GameObject[] potentialModels;

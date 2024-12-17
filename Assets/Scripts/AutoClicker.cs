@@ -16,9 +16,6 @@ public class AutoClicker : MonoBehaviour
     public float baseValue;
     public float rewardExponent;
 
-    public float percentage;
-
-
 
     public TMPro.TMP_Text text;
 

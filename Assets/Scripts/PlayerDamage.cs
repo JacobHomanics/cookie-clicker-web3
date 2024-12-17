@@ -16,10 +16,6 @@ public class PlayerDamage : MonoBehaviour
     public float baseValue;
     public float rewardExponent;
 
-    public float percentage;
-
-
-
     public TMPro.TMP_Text text;
 
     void Update()
@@ -32,4 +28,6 @@ public class PlayerDamage : MonoBehaviour
     {
         level++;
     }
+
+
 }
