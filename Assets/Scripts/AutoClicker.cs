@@ -2,38 +2,30 @@ using UnityEngine;
 
 public class AutoClicker : MonoBehaviour
 {
-    // public Level level;
+    [Header("Core")]
+    public Level strengthLevel;
 
-    // public float damage
-    // {
-    //     get
-    //     {
-    //         return Calculate(baseValue, rewardExponent, level.value);
-    //     }
-    // }
-    // public float Calculate(float initialValue, float growthRate, float iterations)
-    // {
-    //     return initialValue * Mathf.Pow(growthRate, iterations);
-    // }
+    public LevelDependentValue duration;
+    public LevelDependentValue damage;
+
+    public Timer timer;
+
+    [Header("UI")]
+    public TMPro.TMP_Text durationText;
+    public TMPro.TMP_Text damageText;
 
 
-    //smart contract
-    // public float level;
+    void Update()
+    {
+        timer.enabled = strengthLevel.value > 0;
+        timer.duration = duration.Value;
 
-    // public float baseValue;
-    // public float rewardExponent;
+        damageText.text = damage.Value.ToString("F2");
+        durationText.text = duration.Value.ToString("F2");
+    }
 
-
-    // public TMPro.TMP_Text text;
-
-    // void Update()
-    // {
-    //     text.text = damage.ToString("F2");
-    // }
-
-
-    // public void IncreaseByCurve()
-    // {
-    //     level++;
-    // }
+    public void HitEnemy()
+    {
+        FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(damage.Value);
+    }
 }

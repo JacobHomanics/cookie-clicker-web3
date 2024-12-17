@@ -805,7 +805,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 189027093}
-  - component: {fileID: 189027095}
   - component: {fileID: 189027094}
   m_Layer: 0
   m_Name: Auto Clicker
@@ -847,25 +846,9 @@ MonoBehaviour:
   strengthLevel: {fileID: 1364519679}
   duration: {fileID: 1089784910}
   damage: {fileID: 1364519680}
+  timer: {fileID: 560024395}
   durationText: {fileID: 2010276624}
   damageText: {fileID: 371983533}
-  timer: {fileID: 560024395}
---- !u!114 &189027095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 189027092}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c76a263c4263447b1bacb86dc5c5e318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  level: {fileID: 1364519679}
-  baseValue: 1
-  rewardExponent: 1.1
-  text: {fileID: 371983533}
 --- !u!1001 &262582147
 PrefabInstance:
   m_ObjectHideFlags: 0
