@@ -1660,6 +1660,8 @@ MonoBehaviour:
   goldCount: {fileID: 1018476182}
   btn: {fileID: 410428254}
   priceItem: {fileID: 410428258}
+  gold: {fileID: 527633829}
+  price: {fileID: 1977296557}
 --- !u!114 &410428258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2406,6 +2408,8 @@ MonoBehaviour:
   goldCount: {fileID: 1018476182}
   btn: {fileID: 632789617}
   priceItem: {fileID: 632789615}
+  gold: {fileID: 527633829}
+  price: {fileID: 1739281952}
 --- !u!114 &632789617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4303,6 +4307,8 @@ MonoBehaviour:
   goldCount: {fileID: 1018476182}
   btn: {fileID: 1040945487}
   priceItem: {fileID: 1040945485}
+  gold: {fileID: 527633829}
+  price: {fileID: 388402171}
 --- !u!114 &1040945487
 MonoBehaviour:
   m_ObjectHideFlags: 0
