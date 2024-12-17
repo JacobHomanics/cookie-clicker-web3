@@ -6,7 +6,7 @@ public class LevelDependentValue : MonoBehaviour
     public float initialValue = 1f;
     public float percentageChange = 10f;
     [Header("References")]
-    public Level level;
+    public Number level;
 
     public float Value
     {

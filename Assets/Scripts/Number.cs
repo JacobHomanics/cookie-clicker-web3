@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Level : MonoBehaviour
+public class Number : MonoBehaviour
 {
     public float value;
 

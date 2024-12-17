@@ -3,7 +3,7 @@ using UnityEngine;
 public class AutoClicker : MonoBehaviour
 {
     [Header("Core")]
-    public Level strengthLevel;
+    public Number strengthLevel;
 
     public LevelDependentValue duration;
     public LevelDependentValue damage;
