@@ -6,13 +6,19 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   8453: {
-    YourContract: {
-      address: "0xc912a20cd834cf45c3857fb940b60986f2ee12ba",
+    PlayerData: {
+      address: "0x2ae71719342d0714ecbfbd4a0502ad7e9939e6a7",
       abi: [
         {
           type: "function",
           name: "getPartyMemberSpeed",
-          inputs: [],
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              internalType: "address",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -25,7 +31,13 @@ const deployedContracts = {
         {
           type: "function",
           name: "getPartyMemberStrength",
-          inputs: [],
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              internalType: "address",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -38,7 +50,13 @@ const deployedContracts = {
         {
           type: "function",
           name: "getPlayerGold",
-          inputs: [],
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              internalType: "address",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -51,7 +69,13 @@ const deployedContracts = {
         {
           type: "function",
           name: "getPlayerStage",
-          inputs: [],
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              internalType: "address",
+            },
+          ],
           outputs: [
             {
               name: "",
@@ -64,7 +88,13 @@ const deployedContracts = {
         {
           type: "function",
           name: "getPlayerStrength",
-          inputs: [],
+          inputs: [
+            {
+              name: "user",
+              type: "address",
+              internalType: "address",
+            },
+          ],
           outputs: [
             {
               name: "",

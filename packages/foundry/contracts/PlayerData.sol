@@ -1,16 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity >=0.8.0 <0.9.0;
 
-// Useful for debugging. Remove when deploying to a live network.
-import "forge-std/console.sol";
-
-contract YourContract {
-    uint256 s_test = 50;
-
-    function getTest() external view returns (uint256) {
-        return s_test;
-    }
-
+contract PlayerData {
     mapping(address user => uint256) s_partyMemberStrength;
     mapping(address user => uint256) s_partyMemberSpeed;
     mapping(address user => uint256) s_playerStrength;
@@ -34,26 +25,28 @@ contract YourContract {
     }
 
     function setPlayerGold(uint256 number) external {
-        s_playerStage[msg.sender] = number;
+        s_playerGold[msg.sender] = number;
     }
 
-    function getPartyMemberStrength() external view returns (uint256) {
-        return s_partyMemberStrength[msg.sender];
+    function getPartyMemberStrength(
+        address user
+    ) external view returns (uint256) {
+        return s_partyMemberStrength[user];
     }
 
-    function getPartyMemberSpeed() external view returns (uint256) {
-        return s_partyMemberSpeed[msg.sender];
+    function getPartyMemberSpeed(address user) external view returns (uint256) {
+        return s_partyMemberSpeed[user];
     }
 
-    function getPlayerStrength() external view returns (uint256) {
-        return s_playerStrength[msg.sender];
+    function getPlayerStrength(address user) external view returns (uint256) {
+        return s_playerStrength[user];
     }
 
-    function getPlayerStage() external view returns (uint256) {
-        return s_playerStage[msg.sender];
+    function getPlayerStage(address user) external view returns (uint256) {
+        return s_playerStage[user];
     }
 
-    function getPlayerGold() external view returns (uint256) {
-        return s_playerStage[msg.sender];
+    function getPlayerGold(address user) external view returns (uint256) {
+        return s_playerStage[user];
     }
 }

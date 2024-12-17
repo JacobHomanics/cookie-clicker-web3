@@ -806,6 +806,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88289675}
   m_CullTransparentMesh: 1
+--- !u!1 &93775640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93775641}
+  - component: {fileID: 93775642}
+  m_Layer: 0
+  m_Name: Loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93775641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93775640}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1655716223}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &93775642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93775640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47f1f5396e6f74ab09ac22313616a0f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cww3: {fileID: 723427968}
+  functionName: getPlayerStrength
+  OnLoad:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1747308732}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: set_Value
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &127807596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3029,7 +3090,7 @@ MonoBehaviour:
           m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 527633831}
         m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
         m_MethodName: Subtract
@@ -3037,6 +3098,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 1739281952}
           m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 2087185378}
+        m_TargetAssemblyTypeName: NumberSaver, Assembly-CSharp
+        m_MethodName: Connect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3343,11 +3416,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chainId: 8453
-  contractAddress: 0xc912a20cD834Cf45C3857FB940B60986f2eE12BA
+  contractAddress: 0x2Ae71719342D0714eCBfBD4a0502AD7e9939E6a7
   loginButton: {fileID: 161206759}
   addressTextGo: {fileID: 650500564}
   addressText: {fileID: 650500566}
   address: 
+  OnConnectWallet:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 93775642}
+        m_TargetAssemblyTypeName: NumberLoader, Assembly-CSharp
+        m_MethodName: Connect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &723427969
 Transform:
   m_ObjectHideFlags: 0
@@ -3361,7 +3449,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2087185377}
+  - {fileID: 1655716223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &736717105
@@ -6847,6 +6935,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476734972}
   m_CullTransparentMesh: 1
+--- !u!1 &1655716222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1655716223}
+  m_Layer: 0
+  m_Name: Player Strength
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1655716223
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655716222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2087185377}
+  - {fileID: 93775641}
+  m_Father: {fileID: 723427969}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1662985982
 GameObject:
   m_ObjectHideFlags: 0
@@ -7802,7 +7923,7 @@ GameObject:
   - component: {fileID: 2087185377}
   - component: {fileID: 2087185378}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Saver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7816,12 +7937,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2087185376}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 723427969}
+  m_Father: {fileID: 1655716223}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2087185378
 MonoBehaviour:
@@ -7836,6 +7957,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cww3: {fileID: 723427968}
+  functionName: setPlayerStrength
+  number: {fileID: 1747308732}
+  OnSave:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1747308732}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 527633831}
+        m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
+        m_MethodName: Subtract
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1739281952}
+          m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2098162922
 GameObject:
   m_ObjectHideFlags: 0
