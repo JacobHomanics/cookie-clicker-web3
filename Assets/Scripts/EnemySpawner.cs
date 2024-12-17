@@ -5,9 +5,6 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject myPrefab;
 
-    // smart contract
-    // public float stageNumber;
-
     public Number stageNumber;
 
 
@@ -20,7 +17,6 @@ public class EnemySpawner : MonoBehaviour
 
     public void AdvanceStage()
     {
-        // stageNumber.Add(1);
         Destroy(currentEnemy);
         Spawn();
     }
@@ -45,43 +41,13 @@ public class EnemySpawner : MonoBehaviour
         Spawned?.Invoke(go);
     }
 
-    // public float baseHealth = 10f;
-    // public float healthRewardExponent = .1f;
-
-    // public float baseReward = 1f;
-    // public float rewardExponent = 1.1f;
-
-
-
-
-    // [ContextMenu("Predict")]
-    // public void Predict()
-    // {
-    //     int modifierLength = 100;
-
-    //     for (int i = 0; i < modifierLength; i++)
-    //     {
-    //         var result = Calculate(baseHealth, healthRewardExponent, i);
-    //         Debug.Log(i + ": " + result);
-    //     }
-    // }
-
-    // public float Calculate(float initialValue, float growthRate, float iterations)
-    // {
-    //     return initialValue * Mathf.Pow(growthRate, iterations);
-    // }
-
     public NumberDependentValue health;
     public NumberDependentValue gold;
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
-        // var totalHealth = Calculate(baseHealth, healthRewardExponent, stageNumber.value);
-
         rr.maxHealth = health.Value;
         rr.currentHealth = health.Value;
         rr.goldAmount = gold.Value;
-
-        // var totalGold = Calculate(baseReward, rewardExponent, stageNumber.value);
     }
 }
