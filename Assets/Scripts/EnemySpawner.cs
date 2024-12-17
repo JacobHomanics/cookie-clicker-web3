@@ -49,10 +49,7 @@ public class EnemySpawner : MonoBehaviour
     public float rewardExponent = 1.1f;
 
 
-    public float Predict(float baseValue, float exponent, float modifier)
-    {
-        return baseValue * Mathf.Pow(exponent, modifier - 1);
-    }
+
 
     [ContextMenu("Predict")]
     public void Predict()
@@ -61,19 +58,24 @@ public class EnemySpawner : MonoBehaviour
 
         for (int i = 1; i < modifierLength; i++)
         {
-            var result = Predict(baseHealth, healthRewardExponent, i);
+            var result = Calculate(baseHealth, healthRewardExponent, i);
             Debug.Log(i + ": " + result);
         }
     }
 
+    public float Calculate(float baseValue, float exponent, float modifier)
+    {
+        return baseValue * Mathf.Pow(exponent, modifier - 1);
+    }
+
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
-        var totalHealth = baseHealth * Mathf.Pow(healthRewardExponent, stageNumber - 1);
+        var totalHealth = Calculate(baseHealth, healthRewardExponent, stageNumber);
 
         rr.maxHealth = totalHealth;
         rr.currentHealth = totalHealth;
 
-        var totalGold = baseReward * Mathf.Pow(rewardExponent, stageNumber - 1);
+        var totalGold = Calculate(baseReward, rewardExponent, stageNumber);
         rr.goldAmount = totalGold;
     }
 }
