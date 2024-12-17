@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class BtnInteractableToGoldCount : MonoBehaviour
 {
+
     public GoldCount goldCount;
 
     public Button btn;
@@ -12,6 +13,6 @@ public class BtnInteractableToGoldCount : MonoBehaviour
 
     void Update()
     {
-        btn.interactable = goldCount.gold.Value >= priceItem.price;
+        // btn.interactable = goldCount.gold.Value >= priceItem.price;
     }
 }
