@@ -54,9 +54,6 @@ public class EnemySpawner : MonoBehaviour
         rr.maxHealth = totalhealth;
         rr.currentHealth = totalhealth;
 
-        Debug.Log(totalhealth);
-
-
         var totalReward = baseReward * Mathf.Pow(stageNumber, rewardExponent);
         rr.goldAmount = totalReward;
     }
