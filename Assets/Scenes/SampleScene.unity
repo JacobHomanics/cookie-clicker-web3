@@ -842,9 +842,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   autoClicker: {fileID: 189027095}
-  cooldown: 2.5
+  initialTimeLeft: 2.5
   timeLeft: 2.5
-  percentage: 2.5
+  growthRate: 0.95
+  level: 0
   text: {fileID: 2010276624}
 --- !u!114 &189027095
 MonoBehaviour:
@@ -1747,7 +1748,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePrice: 5
   rewardExponent: 1.1
-  level: 1
+  level: 0
   text: {fileID: 1206444141}
 --- !u!1 &438046344
 GameObject:
@@ -2144,7 +2145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePrice: 5
   rewardExponent: 1.75
-  level: 1
+  level: 0
   text: {fileID: 57434928}
 --- !u!114 &632789616
 MonoBehaviour:
@@ -3545,9 +3546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3270187fa7644597a714550086f1801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
+  level: 0
   baseValue: 2
-  rewardExponent: 0.2
+  rewardExponent: 1.2
   text: {fileID: 1790827015}
 --- !u!114 &1018476184
 MonoBehaviour:
@@ -3892,7 +3893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   basePrice: 5
   rewardExponent: 1.1
-  level: 1
+  level: 0
   text: {fileID: 303948462}
 --- !u!114 &1040945486
 MonoBehaviour:

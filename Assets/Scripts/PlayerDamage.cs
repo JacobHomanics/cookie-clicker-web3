@@ -10,9 +10,9 @@ public class PlayerDamage : MonoBehaviour
         }
     }
 
-    public float Calculate(float baseValue, float exponent, float modifier)
+    public float Calculate(float initialValue, float growthRate, float iterations)
     {
-        return baseValue * Mathf.Pow(exponent, modifier - 1);
+        return initialValue * Mathf.Pow(growthRate, iterations);
     }
 
 

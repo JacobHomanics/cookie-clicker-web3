@@ -5,18 +5,33 @@ public class AutoClickerTimer : MonoBehaviour
     public AutoClicker autoClicker;
 
     //smart contract
-    public float cooldown;
+    public float cooldown
+    {
+        get
+        {
+            return Calculate(initialTimeLeft, growthRate, level);
+        }
+    }
+
+    public float Calculate(float initialValue, float growthRate, float iterations)
+    {
+        return initialValue * Mathf.Pow(growthRate, iterations);
+    }
+
+
+    public float initialTimeLeft = 2.5f;
 
     public float timeLeft;
 
-    public float percentage;
+    public float growthRate;
+    public float level;
 
     public TMPro.TMP_Text text;
 
     void Update()
     {
         text.text = cooldown.ToString("F2");
-        if (autoClicker.damage <= 0)
+        if (autoClicker.level <= 0)
         {
             return;
         }
@@ -32,6 +47,6 @@ public class AutoClickerTimer : MonoBehaviour
 
     public void DecreaseByCurve()
     {
-        cooldown = cooldown - cooldown * (percentage / 100);
+        level++;
     }
 }
