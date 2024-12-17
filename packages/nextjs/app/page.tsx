@@ -15,13 +15,7 @@ const Home: NextPage = () => {
 
   return (
     <div className="flex justify-center m-4">
-      <Unity
-        unityProvider={unityProvider}
-        style={{
-          width: "432px",
-          height: "768px",
-        }}
-      />
+      <Unity className="w-[330px] h-[614px] md:w-[432px] md:h-[768px]" unityProvider={unityProvider} />
     </div>
   );
 };
