@@ -1,0 +1,17 @@
+using UnityEngine;
+
+public class Timer : MonoBehaviour
+{
+    public float duration = 5f;
+    public float elapsedTime;
+
+    void Update()
+    {
+        elapsedTime += Time.deltaTime;
+
+        if (elapsedTime >= duration)
+        {
+            elapsedTime = 0;
+        }
+    }
+}

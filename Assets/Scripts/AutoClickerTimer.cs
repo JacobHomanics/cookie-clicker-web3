@@ -5,7 +5,7 @@ public class AutoClickerTimer : MonoBehaviour
     public AutoClicker autoClicker;
 
     //smart contract
-    public float cooldown
+    public float Duration
     {
         get
         {
@@ -21,7 +21,7 @@ public class AutoClickerTimer : MonoBehaviour
 
     public float initialTimeLeft = 2.5f;
 
-    public float timeLeft;
+    public float elapsedTime;
 
     public float growthRate;
     public float level;
@@ -30,18 +30,19 @@ public class AutoClickerTimer : MonoBehaviour
 
     void Update()
     {
-        text.text = cooldown.ToString("F2");
+        text.text = Duration.ToString("F2");
         if (autoClicker.level <= 0)
         {
             return;
         }
 
-        timeLeft -= Time.deltaTime;
+        elapsedTime += Time.deltaTime;
 
-        if (timeLeft <= 0)
+        if (elapsedTime >= Duration)
         {
-            timeLeft = cooldown;
+            elapsedTime = 0;
             FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(autoClicker.damage);
+
         }
     }
 
