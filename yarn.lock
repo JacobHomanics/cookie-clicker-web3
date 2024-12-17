@@ -1790,6 +1790,7 @@ __metadata:
     react-copy-to-clipboard: ~5.1.0
     react-dom: ~18.3.1
     react-hot-toast: ~2.4.0
+    react-unity-webgl: ^9.6.0
     tailwindcss: ~3.4.11
     type-fest: ~4.26.1
     typescript: <5.6.0
@@ -9027,6 +9028,15 @@ __metadata:
     "@types/react":
       optional: true
   checksum: a7b0bf493c9231065ebafa84c4237aed997c746c561196121b7de82fe155a5355b372db5070a3ac9fe980cf7f60dc0f1e8cf6402a2aa5b2957392932ccf76e76
+  languageName: node
+  linkType: hard
+
+"react-unity-webgl@npm:^9.6.0":
+  version: 9.6.0
+  resolution: "react-unity-webgl@npm:9.6.0"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: eb0fb0424b9dee63e9b3972d21277eb78293b7fa192e686faecf2feebb906591a863ce515241701ea35466d00937e9ee4172d518a0db3c474a538ffbca1fea1f
   languageName: node
   linkType: hard
 
