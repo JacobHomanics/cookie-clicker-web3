@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AutoClicker : MonoBehaviour
 {
-    [Header("Core")]
+    [Header("References")]
     public Number strengthLevel;
 
     public NumberDependentValue duration;
@@ -10,18 +10,11 @@ public class AutoClicker : MonoBehaviour
 
     public Timer timer;
 
-    [Header("UI")]
-    public TMPro.TMP_Text durationText;
-    public TMPro.TMP_Text damageText;
-
 
     void Update()
     {
         timer.enabled = strengthLevel.Value > 0;
         timer.duration = duration.Value;
-
-        damageText.text = damage.Value.ToString("F2");
-        durationText.text = duration.Value.ToString("F2");
     }
 
     public void HitEnemy()
