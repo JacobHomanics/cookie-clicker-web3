@@ -746,7 +746,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1018476181}
+      - m_Target: {fileID: 387652464}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: Add
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1873235053}
         m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
         m_MethodName: AdvanceStage
         m_Mode: 1
@@ -841,7 +853,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialValue: 1
-  percentageChange: 10
+  percentageChange: 25
   level: {fileID: 387652464}
 --- !u!1 &189027092
 GameObject:
@@ -2078,8 +2090,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5814f0fe1be4539a678f9b85ee786e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialValue: 1
-  percentageChange: 10
+  initialValue: 10
+  percentageChange: 25
   level: {fileID: 387652464}
 --- !u!1 &541083716
 GameObject:
@@ -3636,7 +3648,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1018476180}
   - component: {fileID: 1018476179}
-  - component: {fileID: 1018476181}
   - component: {fileID: 1018476182}
   - component: {fileID: 1018476183}
   - component: {fileID: 1018476184}
@@ -3678,41 +3689,6 @@ Transform:
   - {fileID: 1873235052}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018476181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018476178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0068d26633b4745e3adfd5b8cb26d3de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myPrefab: {fileID: 5843082062569340566, guid: 793000457191b4a5e8a931e40429a3c8, type: 3}
-  stageNumber: 0
-  currentEnemy: {fileID: 0}
-  Spawned:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1018476184}
-        m_TargetAssemblyTypeName: EnemyHealthDisplayer, Assembly-CSharp
-        m_MethodName: SetGameObject
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  stageNumberText: {fileID: 736717107}
-  baseHealth: 10
-  healthRewardExponent: 1.25
-  baseReward: 1
-  rewardExponent: 1.25
 --- !u!114 &1018476182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5294,7 +5270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myPrefab: {fileID: 5843082062569340566, guid: 793000457191b4a5e8a931e40429a3c8, type: 3}
-  stageNumber: 0
+  stageNumber: {fileID: 387652464}
   currentEnemy: {fileID: 0}
   Spawned:
     m_PersistentCalls:
@@ -5312,10 +5288,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   stageNumberText: {fileID: 736717107}
-  baseHealth: 10
-  healthRewardExponent: 1.25
-  baseReward: 1
-  rewardExponent: 1.25
+  health: {fileID: 497739432}
+  gold: {fileID: 134751744}
 --- !u!1 &1875907170
 GameObject:
   m_ObjectHideFlags: 0

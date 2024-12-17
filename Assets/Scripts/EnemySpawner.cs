@@ -6,7 +6,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject myPrefab;
 
     // smart contract
-    public float stageNumber;
+    // public float stageNumber;
+
+    public Number stageNumber;
+
 
     public GameObject currentEnemy;
 
@@ -17,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void AdvanceStage()
     {
-        stageNumber++;
+        // stageNumber.Add(1);
         Destroy(currentEnemy);
         Spawn();
     }
@@ -31,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        stageNumberText.text = stageNumber.ToString();
+        stageNumberText.text = stageNumber.value.ToString();
     }
 
     public void Spawn()
@@ -42,40 +45,43 @@ public class EnemySpawner : MonoBehaviour
         Spawned?.Invoke(go);
     }
 
-    public float baseHealth = 10f;
-    public float healthRewardExponent = .1f;
+    // public float baseHealth = 10f;
+    // public float healthRewardExponent = .1f;
 
-    public float baseReward = 1f;
-    public float rewardExponent = 1.1f;
-
-
+    // public float baseReward = 1f;
+    // public float rewardExponent = 1.1f;
 
 
-    [ContextMenu("Predict")]
-    public void Predict()
-    {
-        int modifierLength = 100;
 
-        for (int i = 0; i < modifierLength; i++)
-        {
-            var result = Calculate(baseHealth, healthRewardExponent, i);
-            Debug.Log(i + ": " + result);
-        }
-    }
 
-    public float Calculate(float initialValue, float growthRate, float iterations)
-    {
-        return initialValue * Mathf.Pow(growthRate, iterations);
-    }
+    // [ContextMenu("Predict")]
+    // public void Predict()
+    // {
+    //     int modifierLength = 100;
+
+    //     for (int i = 0; i < modifierLength; i++)
+    //     {
+    //         var result = Calculate(baseHealth, healthRewardExponent, i);
+    //         Debug.Log(i + ": " + result);
+    //     }
+    // }
+
+    // public float Calculate(float initialValue, float growthRate, float iterations)
+    // {
+    //     return initialValue * Mathf.Pow(growthRate, iterations);
+    // }
+
+    public LevelDependentValue health;
+    public LevelDependentValue gold;
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
-        var totalHealth = Calculate(baseHealth, healthRewardExponent, stageNumber);
+        // var totalHealth = Calculate(baseHealth, healthRewardExponent, stageNumber.value);
 
-        rr.maxHealth = totalHealth;
-        rr.currentHealth = totalHealth;
+        rr.maxHealth = health.Value;
+        rr.currentHealth = health.Value;
+        rr.goldAmount = gold.Value;
 
-        var totalGold = Calculate(baseReward, rewardExponent, stageNumber);
-        rr.goldAmount = totalGold;
+        // var totalGold = Calculate(baseReward, rewardExponent, stageNumber.value);
     }
 }
