@@ -7,13 +7,10 @@ public class EnemySpawner : MonoBehaviour
 
     public Number stageNumber;
 
-
     public GameObject currentEnemy;
 
     public UnityEvent<GameObject> Spawned;
 
-
-    public TMPro.TMP_Text stageNumberText;
 
     public void AdvanceStage()
     {
@@ -28,10 +25,7 @@ public class EnemySpawner : MonoBehaviour
         Spawn();
     }
 
-    void Update()
-    {
-        stageNumberText.text = stageNumber.Value.ToString();
-    }
+
 
     public void Spawn()
     {
