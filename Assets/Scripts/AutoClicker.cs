@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class AutoClicker : MonoBehaviour
 {
+    public Level level;
+
     public float damage
     {
         get
         {
-            return Calculate(baseValue, rewardExponent, level);
+            return Calculate(baseValue, rewardExponent, level.value);
         }
     }
     public float Calculate(float initialValue, float growthRate, float iterations)
@@ -16,7 +18,7 @@ public class AutoClicker : MonoBehaviour
 
 
     //smart contract
-    public float level;
+    // public float level;
 
     public float baseValue;
     public float rewardExponent;
@@ -30,8 +32,8 @@ public class AutoClicker : MonoBehaviour
     }
 
 
-    public void IncreaseByCurve()
-    {
-        level++;
-    }
+    // public void IncreaseByCurve()
+    // {
+    //     level++;
+    // }
 }

@@ -3,9 +3,11 @@ using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
+    [Header("Properties")]
     public float duration;
     public float elapsedTime;
 
+    [Header("Events")]
     public UnityEvent OnTick;
     public UnityEvent OnDurationElapsed;
 

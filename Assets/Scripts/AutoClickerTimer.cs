@@ -4,12 +4,13 @@ public class AutoClickerTimer : MonoBehaviour
 {
     public AutoClicker autoClicker;
 
-    //smart contract
+    public Level level;
+
     public float Duration
     {
         get
         {
-            return Calculate(initialTimeLeft, growthRate, level);
+            return Calculate(initialTimeLeft, growthRate, level.value);
         }
     }
 
@@ -21,33 +22,42 @@ public class AutoClickerTimer : MonoBehaviour
 
     public float initialTimeLeft = 2.5f;
 
-    public float elapsedTime;
+    // public float elapsedTime;
 
     public float growthRate;
-    public float level;
+    // public float level;
 
     public TMPro.TMP_Text text;
+
+    public MonoBehaviour monoBehaviour;
 
     void Update()
     {
         text.text = Duration.ToString("F2");
-        if (autoClicker.level <= 0)
-        {
-            return;
-        }
+        // if (autoClicker.level.value <= 0)
+        // {
+        //     return;
+        // }
 
-        elapsedTime += Time.deltaTime;
+        monoBehaviour.enabled = autoClicker.level.value > 0;
 
-        if (elapsedTime >= Duration)
-        {
-            elapsedTime = 0;
-            FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(autoClicker.damage);
+        // elapsedTime += Time.deltaTime;
 
-        }
+        // if (elapsedTime >= Duration)
+        // {
+        //     elapsedTime = 0;
+        //     
+
+        // }
     }
 
-    public void DecreaseByCurve()
+    public void HitEnemy()
     {
-        level++;
+        FindAnyObjectByType<EnemySpawner>().currentEnemy.GetComponent<RaycastReceiver>().TakeDamage(autoClicker.damage);
     }
+
+    // public void DecreaseByCurve()
+    // {
+    //     level++;
+    // }
 }
