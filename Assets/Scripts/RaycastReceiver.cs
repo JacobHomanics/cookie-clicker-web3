@@ -78,7 +78,7 @@ public class RaycastReceiver : MonoBehaviour
 
         if (isClicked)
         {
-            TakeDamage(FindAnyObjectByType<PlayerDamage>().damage);
+            TakeDamage(FindAnyObjectByType<PlayerDamage>().damage.Value);
         }
     }
 

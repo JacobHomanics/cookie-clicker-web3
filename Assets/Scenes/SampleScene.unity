@@ -1765,8 +1765,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1364519679}
-        m_TargetAssemblyTypeName: Level, Assembly-CSharp
-        m_MethodName: Add
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2436,15 +2436,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1018476183}
-        m_TargetAssemblyTypeName: PlayerDamage, Assembly-CSharp
-        m_MethodName: IncreaseByCurve
-        m_Mode: 1
+      - m_Target: {fileID: 1747308732}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -3690,6 +3690,7 @@ Transform:
   - {fileID: 189027093}
   - {fileID: 387652463}
   - {fileID: 1873235052}
+  - {fileID: 1747308730}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1018476182
@@ -3718,10 +3719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3270187fa7644597a714550086f1801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  baseValue: 2
-  rewardExponent: 1.2
-  text: {fileID: 1790827015}
+  damage: {fileID: 1747308731}
 --- !u!114 &1018476184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4151,8 +4149,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1089784909}
-        m_TargetAssemblyTypeName: Level, Assembly-CSharp
-        m_MethodName: Add
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5098,6 +5096,70 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1747308729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1747308730}
+  - component: {fileID: 1747308732}
+  - component: {fileID: 1747308731}
+  m_Layer: 0
+  m_Name: Damage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1747308730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747308729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1018476180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747308731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747308729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd5814f0fe1be4539a678f9b85ee786e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialValue: 2
+  percentageChange: 15
+  level: {fileID: 1747308732}
+--- !u!114 &1747308732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747308729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1790827013
 GameObject:
   m_ObjectHideFlags: 0
