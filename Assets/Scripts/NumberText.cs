@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class NumberDependent : MonoBehaviour
+public class NumberText : MonoBehaviour
 {
     public Number reference;
     public TMP_Text text;
