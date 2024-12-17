@@ -2244,18 +2244,6 @@ MonoBehaviour:
   OnSave:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 387652464}
-        m_TargetAssemblyTypeName: Number, Assembly-CSharp
-        m_MethodName: AddOrSubtract
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1873235053}
         m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
         m_MethodName: AdvanceStage
@@ -2265,6 +2253,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 387652464}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -5033,6 +5033,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1873235053}
+        m_TargetAssemblyTypeName: EnemySpawner, Assembly-CSharp
+        m_MethodName: AdvanceStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1018476178
 GameObject:
   m_ObjectHideFlags: 0
@@ -7320,18 +7332,6 @@ MonoBehaviour:
   OnSave:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1364519679}
-        m_TargetAssemblyTypeName: Number, Assembly-CSharp
-        m_MethodName: AddOrSubtract
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 527633831}
         m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
         m_MethodName: Subtract
@@ -7341,6 +7341,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1364519679}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -7463,18 +7475,6 @@ MonoBehaviour:
   OnSave:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1089784909}
-        m_TargetAssemblyTypeName: Number, Assembly-CSharp
-        m_MethodName: AddOrSubtract
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 527633831}
         m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
         m_MethodName: Subtract
@@ -7484,6 +7484,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1089784909}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
@@ -8445,18 +8457,6 @@ MonoBehaviour:
   OnSave:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1747308732}
-        m_TargetAssemblyTypeName: Number, Assembly-CSharp
-        m_MethodName: AddOrSubtract
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 1
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 527633831}
         m_TargetAssemblyTypeName: NumberDependentValueToNumberController, Assembly-CSharp
         m_MethodName: Subtract
@@ -8466,6 +8466,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: NumberDependentValue, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1747308732}
+        m_TargetAssemblyTypeName: Number, Assembly-CSharp
+        m_MethodName: AddOrSubtract
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2

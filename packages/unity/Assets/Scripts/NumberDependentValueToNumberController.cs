@@ -10,6 +10,9 @@ public class NumberDependentValueToNumberController : MonoBehaviour
 
     public void Subtract(NumberDependentValue numberDependentValue)
     {
+        Debug.Log(number.Value);
+        Debug.Log(numberDependentValue.Value);
+
         number.Value -= numberDependentValue.Value;
     }
 }
