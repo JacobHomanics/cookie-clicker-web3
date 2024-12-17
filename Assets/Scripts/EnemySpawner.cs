@@ -48,40 +48,26 @@ public class EnemySpawner : MonoBehaviour
     public float baseReward = 1f;
     public float rewardExponent = 1.1f;
 
+
+    public float Predict(float baseValue, float exponent, float modifier)
+    {
+        return baseValue * Mathf.Pow(exponent, modifier - 1);
+    }
+
     [ContextMenu("Predict")]
     public void Predict()
     {
-        // int exponent = 100;
+        int modifierLength = 100;
 
-        // for (int i = 0; i < exponent; i++)
-        // {
-        //     Debug.Log(totalExp);
-
-        //     // var result = Mathf.Pow(i, healthRewardExponent);
-        //     // Debug.Log("For stage number: " + i + ", increase by " + result);
-        // }
+        for (int i = 1; i < modifierLength; i++)
+        {
+            var result = Predict(baseHealth, healthRewardExponent, i);
+            Debug.Log(i + ": " + result);
+        }
     }
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
-
-        // var totalGoldToAdd = 0f;
-        // var totalHealthToAdd = 0f;
-
-        // for (int i = 0; i < stageNumber; i++)
-        // {
-        //     totalHealthToAdd += Mathf.Pow(stageNumber, healthRewardExponent);
-        //     totalGoldToAdd += Mathf.Pow(stageNumber, rewardExponent);
-
-
-        //     // var totalhealth = baseHealth * Mathf.Pow(stageNumber, healthRewardExponent);
-        //     // rr.maxHealth = totalhealth;
-        //     // rr.currentHealth = totalhealth;
-
-        //     // var totalReward = baseReward * Mathf.Pow(stageNumber, rewardExponent);
-        //     // rr.goldAmount = totalReward;
-        // }
-
         var totalHealth = baseHealth * Mathf.Pow(healthRewardExponent, stageNumber - 1);
 
         rr.maxHealth = totalHealth;
@@ -89,13 +75,5 @@ public class EnemySpawner : MonoBehaviour
 
         var totalGold = baseReward * Mathf.Pow(rewardExponent, stageNumber - 1);
         rr.goldAmount = totalGold;
-
-        // rr.currentHealth = totalhealth;
-
-        // var totalReward = baseReward * Mathf.Pow(stageNumber, rewardExponent);
-        // rr.goldAmount = totalReward;
-
-
-
     }
 }
