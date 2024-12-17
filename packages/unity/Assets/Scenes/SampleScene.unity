@@ -2268,6 +2268,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  gold: {fileID: 527633829}
+  simulator: {fileID: 527633831}
+  ndp: {fileID: 0}
 --- !u!1 &496004480
 GameObject:
   m_ObjectHideFlags: 0
@@ -3503,7 +3506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chainId: 8453
-  contractAddress: 0x2Ae71719342D0714eCBfBD4a0502AD7e9939E6a7
+  contractAddress: 0x67699539DD86D946A2F497d3b137f7ad5b23fEd8
   loginButton: {fileID: 161206759}
   addressTextGo: {fileID: 650500564}
   addressText: {fileID: 650500566}
@@ -7356,6 +7359,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  gold: {fileID: 527633829}
+  simulator: {fileID: 527633831}
+  ndp: {fileID: 1977296557}
 --- !u!1 &1655716222
 GameObject:
   m_ObjectHideFlags: 0
@@ -7499,6 +7505,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  gold: {fileID: 527633829}
+  simulator: {fileID: 527633831}
+  ndp: {fileID: 388402171}
 --- !u!1 &1706131089
 GameObject:
   m_ObjectHideFlags: 0
@@ -8481,6 +8490,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  gold: {fileID: 527633829}
+  simulator: {fileID: 527633831}
+  ndp: {fileID: 1739281952}
 --- !u!1 &2098162922
 GameObject:
   m_ObjectHideFlags: 0

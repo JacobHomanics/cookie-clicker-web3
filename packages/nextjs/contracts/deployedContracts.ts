@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   8453: {
     PlayerData: {
-      address: "0x2ae71719342d0714ecbfbd4a0502ad7e9939e6a7",
+      address: "0x67699539dd86d946a2f497d3b137f7ad5b23fed8",
       abi: [
         {
           type: "function",
@@ -106,21 +106,13 @@ const deployedContracts = {
         },
         {
           type: "function",
-          name: "getTest",
-          inputs: [],
-          outputs: [
+          name: "setPartyMemberSpeed",
+          inputs: [
             {
-              name: "",
+              name: "goldAmount",
               type: "uint256",
               internalType: "uint256",
             },
-          ],
-          stateMutability: "view",
-        },
-        {
-          type: "function",
-          name: "setPartyMemberSpeed",
-          inputs: [
             {
               name: "number",
               type: "uint256",
@@ -135,6 +127,11 @@ const deployedContracts = {
           name: "setPartyMemberStrength",
           inputs: [
             {
+              name: "goldAmount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
               name: "number",
               type: "uint256",
               internalType: "uint256",
@@ -147,6 +144,11 @@ const deployedContracts = {
           type: "function",
           name: "setPlayerGold",
           inputs: [
+            {
+              name: "goldAmount",
+              type: "uint256",
+              internalType: "uint256",
+            },
             {
               name: "number",
               type: "uint256",
@@ -161,6 +163,11 @@ const deployedContracts = {
           name: "setPlayerStage",
           inputs: [
             {
+              name: "goldAmount",
+              type: "uint256",
+              internalType: "uint256",
+            },
+            {
               name: "number",
               type: "uint256",
               internalType: "uint256",
@@ -173,6 +180,11 @@ const deployedContracts = {
           type: "function",
           name: "setPlayerStrength",
           inputs: [
+            {
+              name: "goldAmount",
+              type: "uint256",
+              internalType: "uint256",
+            },
             {
               name: "number",
               type: "uint256",

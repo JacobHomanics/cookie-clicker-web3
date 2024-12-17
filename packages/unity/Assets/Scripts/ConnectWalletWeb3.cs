@@ -29,6 +29,7 @@ public class ConnectWalletWeb3 : MonoBehaviour
         address = await wallet.GetAddress();
 #endif
 
+        Debug.Log("Connected");
         OnConnectWallet?.Invoke();
     }
 
