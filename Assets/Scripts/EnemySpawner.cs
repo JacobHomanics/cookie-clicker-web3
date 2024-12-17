@@ -35,10 +35,8 @@ public class EnemySpawner : MonoBehaviour
 
     public void Spawn()
     {
-        Debug.Log("Step 1");
         var go = Instantiate(myPrefab);
         currentEnemy = go;
-        Debug.Log("Step 2");
         CalculatePercentageIncrease(go.GetComponent<RaycastReceiver>());
         Spawned?.Invoke(go);
     }
@@ -51,7 +49,6 @@ public class EnemySpawner : MonoBehaviour
 
     public void CalculatePercentageIncrease(RaycastReceiver rr)
     {
-        Debug.Log("Step 3");
 
         var totalhealth = baseHealth * Mathf.Pow(stageNumber, healthRewardExponent);
         rr.maxHealth = totalhealth;

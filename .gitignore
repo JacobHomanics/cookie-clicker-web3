@@ -15,6 +15,7 @@ Builds/
 # Ignore user-specific files
 .user
 .userprefs
+[Uu]serSettings/
 
 # Ignore OS files
 .DS_Store
