@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialValue: 5
-  percentageChange: 10
+  percentageChange: 325
   level: {fileID: 1089784909}
 --- !u!1 &410428252
 GameObject:
@@ -5648,7 +5648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialValue: 1
-  percentageChange: 10
+  percentageChange: 35
   level: {fileID: 1364519679}
 --- !u!1 &1426116112
 GameObject:
@@ -5664,7 +5664,7 @@ GameObject:
   - component: {fileID: 1426116115}
   - component: {fileID: 1426116114}
   m_Layer: 0
-  m_Name: UI Value (2)
+  m_Name: UI Value
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6021,7 +6021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialValue: 5
-  percentageChange: 75
+  percentageChange: 55
   level: {fileID: 1747308732}
 --- !u!1 &1747308729
 GameObject:
@@ -6658,7 +6658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialValue: 5
-  percentageChange: 10
+  percentageChange: 125
   level: {fileID: 1364519679}
 --- !u!1 &2010276622
 GameObject:
