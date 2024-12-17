@@ -12,7 +12,7 @@ public class LevelDependentValue : MonoBehaviour
     {
         get
         {
-            return Calculate(initialValue, percentageChange, level.value);
+            return Calculate(initialValue, percentageChange, level.Value);
         }
     }
 

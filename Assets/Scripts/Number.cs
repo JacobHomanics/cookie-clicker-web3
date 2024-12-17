@@ -1,17 +1,32 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Number : MonoBehaviour
 {
-    public float value;
-
-    public void Add(float amount)
+    [SerializeField] private float _value;
+    public float Value
     {
-        value += amount;
+        get
+        {
+            return _value;
+        }
+        set
+        {
+            _value = value;
+            OnChange?.Invoke(_value);
+        }
+    }
+
+    public UnityEvent<float> OnChange;
+
+    public void AddOrSubtract(float newValue)
+    {
+        Value += newValue;
     }
 
     [ContextMenu("Add 1")]
     public void Add1()
     {
-        value += 1;
+        Value += 1;
     }
 }

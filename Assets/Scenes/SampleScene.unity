@@ -748,7 +748,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 387652464}
         m_TargetAssemblyTypeName: Number, Assembly-CSharp
-        m_MethodName: Add
+        m_MethodName: AddOrSubtract
         m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1651,7 +1651,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &410428252
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,7 +4381,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1089784910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5001,7 +5007,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 0
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1364519680
 MonoBehaviour:
   m_ObjectHideFlags: 0

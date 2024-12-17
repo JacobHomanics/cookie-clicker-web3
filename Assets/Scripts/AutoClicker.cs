@@ -17,7 +17,7 @@ public class AutoClicker : MonoBehaviour
 
     void Update()
     {
-        timer.enabled = strengthLevel.value > 0;
+        timer.enabled = strengthLevel.Value > 0;
         timer.duration = duration.Value;
 
         damageText.text = damage.Value.ToString("F2");

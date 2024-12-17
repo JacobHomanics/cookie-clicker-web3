@@ -34,7 +34,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        stageNumberText.text = stageNumber.value.ToString();
+        stageNumberText.text = stageNumber.Value.ToString();
     }
 
     public void Spawn()
