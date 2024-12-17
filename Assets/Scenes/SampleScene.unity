@@ -255,6 +255,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16451889}
   m_CullTransparentMesh: 1
+--- !u!1 &24508938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 24508939}
+  - component: {fileID: 24508941}
+  - component: {fileID: 24508942}
+  - component: {fileID: 24508943}
+  - component: {fileID: 24508940}
+  - component: {fileID: 24508944}
+  m_Layer: 0
+  m_Name: UI Value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &24508939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24508938}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 387652463}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24508940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24508938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22b6bb8afde6e46d6a57f859118716e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 1
+--- !u!114 &24508941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24508938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb5c655a265124794bdb82b60059742d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _value: 0
+  OnChange:
+    m_PersistentCalls:
+      m_Calls: []
+  components: []
+--- !u!114 &24508942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24508938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f6445d4bbeddd46823bb5e0bd71fdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 24508943}
+        m_TargetAssemblyTypeName: NumberCalculator, Assembly-CSharp
+        m_MethodName: Calculate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &24508943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24508938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3668af94ae374b10af28573a4529e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: 24508944}
+  - {fileID: 24508940}
+  OnCalculate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 736717110}
+        m_TargetAssemblyTypeName: FloatTextDisplayer, Assembly-CSharp
+        m_MethodName: Set
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &24508944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24508938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fbc4b2bf94794d8b8299c2bdad20e04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: {fileID: 387652464}
 --- !u!1 &40509595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1432,6 +1568,7 @@ Transform:
   m_Children:
   - {fileID: 497739431}
   - {fileID: 134751743}
+  - {fileID: 24508939}
   m_Father: {fileID: 1018476180}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &387652464
@@ -1873,6 +2010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 497739431}
   - component: {fileID: 497739432}
+  - component: {fileID: 497739433}
   m_Layer: 0
   m_Name: Enemy HP
   m_TagString: Untagged
@@ -1910,6 +2048,21 @@ MonoBehaviour:
   initialValue: 10
   percentageChange: 25
   level: {fileID: 387652464}
+--- !u!114 &497739433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 497739430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbea4bab4ff0b433cb7018808558a2cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialValue: 1
+  percentageChange: 10
+  level: {fileID: 0}
 --- !u!1 &527633827
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,8 +2748,9 @@ GameObject:
   - component: {fileID: 736717108}
   - component: {fileID: 736717107}
   - component: {fileID: 736717109}
+  - component: {fileID: 736717110}
   m_Layer: 5
-  m_Name: Text (TMP) (13)
+  m_Name: Stage Number Value Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2727,12 +2881,26 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736717105}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 531150b6bb9d74d70a8cdd6230fef056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reference: {fileID: 387652464}
+  text: {fileID: 736717107}
+  format: 
+--- !u!114 &736717110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736717105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1259b8d524e49388df75be2bbc5f72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   text: {fileID: 736717107}
   format: 
 --- !u!1 &800747848
@@ -4085,7 +4253,7 @@ GameObject:
   - component: {fileID: 1033805198}
   - component: {fileID: 1033805197}
   m_Layer: 5
-  m_Name: Text (TMP) (12)
+  m_Name: Stage Number Title Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5546,7 +5714,7 @@ GameObject:
   - component: {fileID: 1747308732}
   - component: {fileID: 1747308731}
   m_Layer: 0
-  m_Name: Strength
+  m_Name: Strength Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5850,7 +6018,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  stageNumberText: {fileID: 736717107}
   health: {fileID: 497739432}
   gold: {fileID: 134751744}
 --- !u!1 &1875907170
